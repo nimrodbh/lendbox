@@ -1,0 +1,33 @@
+[project]
+name = "lendbox"
+version = "0.1.0"
+description = "Neighborhood library of things: date-range lending with no double bookings, enforced by PostgreSQL"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "jinja2>=3.1",
+    "python-multipart>=0.0.9",
+    "psycopg[binary]>=3.1",
+    "jsonschema>=4.21",
+    "tzdata>=2024.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+include = ["lendbox*"]
+
+[tool.setuptools.package-data]
+"lendbox.db" = ["migrations/*.sql"]
+"lendbox.i18n" = ["*.json"]
+"lendbox.web" = ["templates/*.html", "templates/legal/*.html", "static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = ["context/handoff"]  # agent deliveries are linted after they move into the repo

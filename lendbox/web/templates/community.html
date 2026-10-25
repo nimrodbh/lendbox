@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}{{ c.name }}{% endblock %}
+{% block content %}
+<p class="crumbs"><a href="/">{{ t("home.interests") if c.kind == "interest" else t("home.areas") }}</a>{% if c.parent_name %} · {{ c.parent_name }}{% endif %}</p>
+<div class="comm-head">
+  <div><h1>{{ c.name }}</h1><p class="small muted">{{ t("community.members", count=c.members) }}</p></div>
+  {% if user %}
+    <form method="post" action="/c/{{ c.slug }}/join"><input type="hidden" name="csrf_token" value="{{ csrf }}">
+      <button class="btn {{ 'btn-ghost' if c.joined else 'btn-primary' }}" type="submit" aria-pressed="{{ 'true' if c.joined else 'false' }}">
+        {{ t("community.joined") if c.joined else t("community.join") }}</button></form>
+  {% else %}
+    <a class="btn btn-primary" href="/login?next=/c/{{ c.slug }}">{{ t("community.join") }}</a>
+  {% endif %}
+</div>
+{% if c.rules %}<section class="card pad section"><h2>{{ t("community.rules") }}</h2><p>{{ c.rules }}</p></section>{% endif %}
+{% if c.kind == "interest" %}
+<form method="get" action="/c/{{ c.slug }}" class="row wrap section">
+  <label for="area">{{ t("community.area_filter") }}</label>
+  <select class="input input-narrow" id="area" name="area">
+    <option value="">{{ t("browse.area.any") }}</option>
+    {% for a in areas %}<option value="{{ a.id }}" {% if selected_area == a.id|string %}selected{% endif %}>{{ "  " * a.depth }}{{ a.name }}</option>{% endfor %}
+  </select>
+  <button class="btn btn-ghost" type="submit">{{ t("browse.submit") }}</button>
+</form>
+{% endif %}
+<section class="section">
+  {% if results %}
+  <div class="grid">
+    {% for l in results %}
+      <a class="item" href="/items/{{ l.id }}">
+        <div class="tile t-tools"><span class="badge">{{ l.category_name }}</span></div>
+        <div class="item-body"><p class="item-title">{{ l.title }}</p>
+          <p class="small"><span class="price">{% if l.price_per_unit_agorot == 0 %}{{ t("price.free") }}{% else %}{{ t("price.per_day", amount=l.price_per_unit_agorot|ils) }}{% endif %}</span></p>
+          <p class="xs muted">{{ l.area_name }}</p></div>
+      </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty"><p class="muted">{{ t("community.empty") }}</p>
+    <div class="row wrap center"><a class="btn btn-primary" href="/listings/new">{{ t("nav.list") }}</a>
+      <a class="btn btn-ghost" href="/looking-for">{{ t("looking.post") }}</a></div></div>
+  {% endif %}
+</section>
+<section class="section">
+  <div class="row between"><h2>{{ t("looking.title") }}</h2><a href="/looking-for">{{ t("looking.post") }}</a></div>
+  <div class="looking">
+    {% for p in posts %}<div class="card pad"><b>{{ p.title }}</b><p class="small muted">{{ p.author_name }} · {{ p.area_name }}{% if p.range %} · {{ p.range|range }}{% endif %}</p></div>
+    {% else %}<p class="small muted">{{ t("looking.empty") }}</p>{% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Terms of use | Lendbox{% endblock %}
+{% block content %}
+<div class="narrow stack">
+  <h1>Terms of use</h1>
+  <p class="notice info">Lendbox helps you find things to borrow from neighbors. Your loan agreement is with the other person, not with us. You settle the price and required deposit in person at pickup; we never handle your money.</p>
+
+  <h2 id="what-lendbox-is">What Lendbox is</h2>
+  <p>We are a noticeboard for lending and borrowing belongings. We help you list an item, request dates and talk with the other person. We are not a party to your loan, an insurer or a payment service. These terms cover your use of Lendbox. The two people involved agree on the loan itself.</p>
+
+  <h2 id="your-account">Your account</h2>
+  <p>You can sign up with an email address. You must confirm that address before you can request an item, publish a listing or post. Choose a display name you are comfortable making public. Keep your password private and do not use someone else's account.</p>
+  <p>Email confirmation tells us you can receive mail at that address. It is not a promise about your identity, reliability or ability to use an item safely.</p>
+
+  <h2 id="listing">Listing an item</h2>
+  <p>List only things you own or have permission to lend. Describe the actual condition and show real photos of the item. Include missing parts, faults and any safety concerns. Do not offer something that is unsafe to use.</p>
+  <p>Set a daily price, which may be free, and a required deposit. Explain any minimum loan length and late fee. Keep private pickup instructions out of your title, description and photos. Before approval, only the neighborhood should be public; the exact pickup spot is shown to the borrower when you approve.</p>
+
+  <h2 id="borrowing">Requesting and borrowing</h2>
+  <p>Read the listing and ask about anything unclear before you request it. A request closes on its own after 48 hours without an answer. When an owner approves a request, other overlapping requests are declined automatically.</p>
+  <p>Agree on pickup and return times, included parts and how to use the item. Check its condition together before taking it. The owner marks pickup and return in Lendbox. Return the item on time, in the same state, with all its parts. Tell the owner promptly if you expect a delay or something goes wrong.</p>
+
+  <h2 id="money-and-deposits">Money and deposits</h2>
+  <p>You pay the daily price and required deposit to the owner in person at pickup. Free loans still require a deposit. We never charge, hold or refund money, and we do not store payment data.</p>
+  <p>Before handing over money, agree on the total price, deposit amount, when the deposit will be returned and how you will handle damage or late return. Keep your own note of what you agreed and paid. A dispute about money is between you and the other person; Lendbox cannot issue a refund or release a deposit.</p>
+
+  <h2 id="prohibited">What you cannot list or lend</h2>
+  <p>Do not use Lendbox to offer or arrange loans of any of these:</p>
+  <ul>
+    <li>Vehicles of any kind, including cars, scooters and e-bikes.</li>
+    <li>Weapons, medication or child car seats.</li>
+    <li>Live animals or food.</li>
+    <li>Anything illegal to own or lend in Israel.</li>
+    <li>Items that need a license or insurance to lend.</li>
+  </ul>
+  <p>A category or listing appearing on the site does not make a prohibited loan allowed. Report an offer that breaks these rules.</p>
+
+  <h2 id="safety">Keeping handovers safe</h2>
+  <p>Choose a public or semi-public pickup spot, such as a cafe entrance or building lobby. Meet in daylight when possible and tell someone where you are going. Do not put a home address or phone number in public text.</p>
+  <p>Ask for instructions and check the item before using it. If an item or meeting feels unsafe, do not go ahead. Lendbox does not provide insurance. A report is not an emergency response; seek urgent help through the appropriate local service if someone is in immediate danger.</p>
+
+  <h2 id="reviews">Reviews</h2>
+  <p>After the owner marks the return, both sides may review each other. Reviews are blind: they become visible once both people have reviewed, or 14 days after the return. Be honest about your own experience. Do not include private pickup details, threats or demands for a good rating.</p>
+
+  <h2 id="ending">Stopping use and handling rule breaches</h2>
+  <p>You can stop using Lendbox. First arrange the return of any item you still hold and settle anything you owe directly with the other person. Stopping use does not settle an existing loan.</p>
+  <p>Admins can see reports and hide listings or users. We may use these tools when content or conduct breaks the rules. Contact us if you think a report or a hidden listing or user needs another look, or if you want to discuss your account.</p>
+
+  <h2 id="liability">Who is responsible</h2>
+  <p>You and the other person are responsible for your loan agreement and your own actions. An owner's listing is their description, not our guarantee that an item is safe, suitable or available. Approval is not insurance or a promise that either side will meet their obligations.</p>
+  <p>We cannot promise that every listing is accurate or that every loan will go smoothly. We do not take over either person's duties or settle their money disputes. Nothing in these terms removes rights or duties that Israeli law does not allow you or us to exclude.</p>
+
+  <h2 id="changes">Changes and applicable law</h2>
+  <p>We run Lendbox from Israel, and Israeli law applies to these terms. We may revise this page as the service changes. Check the date below and read the current terms before using the service again.</p>
+
+  <h2 id="contact">Contact us</h2>
+  <p>For questions about these terms, your account or a report, write to {{ contact_email }}. Do not send your password.</p>
+  <p class="small muted">Last updated {{ updated }}</p>
+</div>
+{% endblock %}

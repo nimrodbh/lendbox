@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}{{ t("browse.title") }}{% endblock %}
+{% block content %}
+<h1>{{ t("browse.title") }}</h1>
+<form method="get" action="/browse" class="search card pad">
+  <div class="field"><label for="q">{{ t("browse.q") }}</label>
+    <input class="input" id="q" name="q" value="{{ form.q }}" placeholder="{{ t('browse.q.placeholder') }}"></div>
+  <div class="two">
+    <div class="field"><label for="start">{{ t("browse.start") }}</label>
+      <input class="input" id="start" name="start" type="date" value="{{ form.start }}"></div>
+    <div class="field"><label for="last_day">{{ t("browse.last_day") }}</label>
+      <input class="input" id="last_day" name="last_day" type="date" value="{{ form.last_day }}"></div>
+  </div>
+  <div class="field"><label for="area">{{ t("browse.area") }}</label>
+    <select class="input" id="area" name="area">
+      <option value="">{{ t("browse.area.any") }}</option>
+      {% for a in areas %}<option value="{{ a.id }}" {% if form.area == a.id|string %}selected{% endif %}>{{ "  " * a.depth }}{{ a.name }}</option>{% endfor %}
+    </select></div>
+  <div class="field"><label for="interest">{{ t("browse.interest") }}</label>
+    <select class="input" id="interest" name="interest">
+      <option value="">{{ t("browse.interest.any") }}</option>
+      {% for c in interests %}<option value="{{ c.id }}" {% if form.interest == c.id|string %}selected{% endif %}>{{ c.name }}</option>{% endfor %}
+    </select></div>
+  <div class="field"><label for="category">{{ t("browse.category") }}</label>
+    <select class="input" id="category" name="category">
+      <option value="">{{ t("browse.category.any") }}</option>
+      {% for c in categories %}<option value="{{ c.id }}" {% if form.category == c.id|string %}selected{% endif %}>{{ c.name }}</option>{% endfor %}
+    </select></div>
+  <div class="field"><label for="max_price">{{ t("browse.max_price") }}</label>
+    <input class="input" id="max_price" name="max_price" inputmode="numeric" value="{{ form.max_price }}"></div>
+  <button class="btn btn-primary" type="submit">{{ t("browse.submit") }}</button>
+</form>
+<p class="small muted">{{ t("browse.count", count=results|length) }}{% if rng %} · {{ t("browse.free_dates", range=rng|range) }}{% endif %}</p>
+{% if results %}
+<div class="grid">
+  {% for l in results %}
+    <a class="item" href="/items/{{ l.id }}">
+      <div class="tile t-tools"><span class="badge">{{ t("condition." ~ l.condition) }}</span></div>
+      <div class="item-body">
+        <p class="item-title">{{ l.title }}</p>
+        <p class="small"><span class="price">{% if l.price_per_unit_agorot == 0 %}{{ t("price.free") }}{% else %}{{ t("price.per_day", amount=l.price_per_unit_agorot|ils) }}{% endif %}</span></p>
+        <p class="xs muted">{{ l.area_name }} · {{ t("item.deposit") }} {{ l.deposit_agorot|ils }}</p>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+{% else %}
+<div class="empty"><h2>{{ t("browse.empty.title") }}</h2><p class="muted">{{ t("browse.empty.body") }}</p></div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% macro report_form(target_type, target_id, label, back) %}
+<details class="report">
+  <summary>{{ t(label) }}</summary>
+  <form method="post" action="/reports" class="stack">
+    <input type="hidden" name="csrf_token" value="{{ csrf }}">
+    <input type="hidden" name="target_type" value="{{ target_type }}">
+    <input type="hidden" name="target_id" value="{{ target_id }}">
+    <input type="hidden" name="back" value="{{ back }}">
+    <label class="small" for="reason-{{ target_type }}-{{ target_id }}">{{ t("report.reason") }}</label>
+    <textarea class="input" id="reason-{{ target_type }}-{{ target_id }}" name="reason" maxlength="1000" required></textarea>
+    <button class="btn btn-ghost" type="submit">{{ t("report.submit") }}</button>
+  </form>
+</details>
+{% endmacro %}

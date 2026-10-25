@@ -1,0 +1,68 @@
+{
+  "power-tools": {
+    "booking_unit": "day",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Power tools",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["power_source"],
+      "properties": {
+        "power_source": {"type": "string", "enum": ["corded", "battery", "gas", "manual"]},
+        "brand": {"type": "string", "minLength": 1, "maxLength": 60},
+        "model": {"type": "string", "maxLength": 80},
+        "voltage_v": {"type": "integer", "enum": [12, 18, 20, 36, 40, 230]},
+        "battery_included": {"type": "boolean"},
+        "consumables_included": {"type": "boolean"},
+        "weight_kg": {"type": "number", "exclusiveMinimum": 0, "maximum": 100}
+      }
+    }
+  },
+  "musical-instruments": {
+    "booking_unit": "day",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Musical instruments",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["instrument_family", "case_included"],
+      "properties": {
+        "instrument_family": {
+          "type": "string",
+          "enum": ["strings", "keys", "percussion", "wind", "brass", "electronic", "audio_gear"]
+        },
+        "brand": {"type": "string", "minLength": 1, "maxLength": 60},
+        "case_included": {"type": "boolean"},
+        "accessories": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "maxLength": 60},
+          "uniqueItems": true,
+          "maxItems": 20
+        },
+        "skill_tier": {"type": "string", "enum": ["student", "intermediate", "professional"]}
+      }
+    }
+  },
+  "sublets": {
+    "booking_unit": "month",
+    "schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Apartment sublets",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rooms", "floor", "furnished", "shared_with", "check_in_from"],
+      "properties": {
+        "rooms": {"type": "number", "minimum": 1, "maximum": 15, "multipleOf": 0.5,
+                  "description": "Israeli room count, half rooms allowed (2.5)."},
+        "floor": {"type": "integer", "minimum": -2, "maximum": 100},
+        "furnished": {"type": "boolean"},
+        "shared_with": {"type": "integer", "minimum": 0, "maximum": 10,
+                        "description": "Flatmates staying in the apartment; 0 means the whole place."},
+        "check_in_from": {"type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                          "description": "Earliest check-in date; not a booking bound."},
+        "bills_included": {"type": "boolean"},
+        "pets_allowed": {"type": "boolean"}
+      }
+    }
+  }
+}

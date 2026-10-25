@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% from "_report.html" import report_form %}
+{% block title %}{{ listing.title }}{% endblock %}
+{% block content %}
+<div class="item-layout">
+  <section class="stack">
+    <div class="tile t-tools"><span class="badge">{{ listing.category_name }}</span></div>
+    <h1>{{ listing.title }}</h1>
+    <div class="owner"><span class="avatar">{{ listing.owner_name[:1] }}</span>
+      <div><b>{{ t("item.owner", name=listing.owner_name) }}</b>
+        <p class="xs muted">{% if listing.owner_verified %}{{ t("item.verified") }} · {% endif %}{% if rating.count == 1 %}{{ t("rating.summary.one", avg=rating.avg) }}{% elif rating.count %}{{ t("rating.summary", avg=rating.avg, count=rating.count) }}{% else %}{{ t("rating.none") }}{% endif %}</p></div></div>
+    <p>{{ listing.description }}</p>
+    <div class="facts">
+      <div class="fact"><span class="xs muted">{{ t("item.deposit") }}</span><b>{{ listing.deposit_agorot|ils }}</b>
+        <span class="xs muted">{{ t("item.deposit.note") }}</span></div>
+      <div class="fact"><span class="xs muted">{{ t("item.condition") }}</span><b>{{ t("condition." ~ listing.condition) }}</b></div>
+      <div class="fact"><span class="xs muted">{{ t("item.minimum") }}</span><b>{{ t("item.minimum.one") if listing.min_units == 1 else t("item.minimum.days", n=listing.min_units) }}</b></div>
+      {% if listing.late_fee_agorot %}<div class="fact"><span class="xs muted">{{ t("item.late_fee") }}</span><b>{{ listing.late_fee_agorot|ils }}</b></div>{% endif %}
+      <div class="fact"><span class="xs muted">{{ t("item.pickup") }}</span>
+        <b>{% if show_pickup %}{{ listing.pickup_detail or listing.area_name }}{% else %}{{ t("item.pickup.hidden", area=listing.area_name) }}{% endif %}</b></div>
+    </div>
+  </section>
+  <aside class="card pad stack">
+    <p class="price">{% if listing.price_per_unit_agorot == 0 %}{{ t("price.free") }}{% else %}{{ t("price.per_day", amount=listing.price_per_unit_agorot|ils) }}{% endif %}</p>
+    <div>
+      <h3>{{ t("item.taken") }}</h3>
+      {% if listing.taken %}<ul class="small">{% for r in listing.taken %}<li>{{ r|range }}</li>{% endfor %}</ul>
+      {% else %}<p class="small muted">{{ t("item.taken.none") }}</p>{% endif %}
+    </div>
+    {% if error %}<p class="notice warn" role="alert">{{ error }}</p>{% endif %}
+    {% if user and user.id == listing.owner_id %}
+      <p class="notice info">{{ t("item.request.own") }}</p>
+    {% elif user %}
+      <form method="post" action="/items/{{ listing.id }}/requests" class="stack">
+        <input type="hidden" name="csrf_token" value="{{ csrf }}">
+        <div class="two">
+          <div class="field"><label for="start">{{ t("browse.start") }}</label><input class="input" id="start" name="start" type="date" required></div>
+          <div class="field"><label for="last_day">{{ t("browse.last_day") }}</label><input class="input" id="last_day" name="last_day" type="date" required></div>
+        </div>
+        <div class="field"><label for="message">{{ t("item.request.message") }}</label><textarea class="input" id="message" name="message" maxlength="2000"></textarea></div>
+        <button class="btn btn-primary btn-block" type="submit">{{ t("item.request.submit") }}</button>
+      </form>
+      <p class="xs muted">{{ t("item.money", owner=listing.owner_name) }} {{ t("item.expiry") }}</p>
+    {% else %}
+      <a class="btn btn-primary btn-block" href="/login?next=/items/{{ listing.id }}">{{ t("item.request.login") }}</a>
+    {% endif %}
+    {% if user and user.id != listing.owner_id %}{{ report_form("listing", listing.id, "report.listing", "/items/" ~ listing.id) }}{% endif %}
+  </aside>
+</div>
+{% endblock %}

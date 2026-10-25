@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{ t("lending.title") }}{% endblock %}
+{% block content %}
+<h1>{{ t("lending.title") }}</h1>
+{% if error %}<p class="notice warn" role="alert">{{ error }}</p>{% endif %}
+<nav class="tabs" aria-label="{{ t('lending.title') }}">
+  {% for key, n in [("requests", inbox.requests|length), ("out", inbox.out|length), ("items", inbox["items"]|length)] %}
+    <a class="tab" href="/lending?tab={{ key }}" {% if tab == key %}aria-selected="true" aria-current="page"{% endif %}>{{ t("lending.tab." ~ key) }} ({{ n }})</a>
+  {% endfor %}
+</nav>
+{% if tab == "requests" %}
+  {% for r in inbox.requests %}
+    <article class="card pad req">
+      <div class="row between"><a href="/bookings/{{ r.id }}"><b>{{ r.title }}</b></a><span class="badge">{{ t("lending.closes", hours=r.hours_left) }}</span></div>
+      <p>{{ r.borrower_name }} · {{ r.range|range }}</p>
+      <p class="small muted">{{ t("lending.total", rental=r.rental_agorot|ils, deposit=r.deposit_agorot|ils) }}</p>
+      {% if r.message %}<p class="small">"{{ r.message }}"</p>{% endif %}
+      {% if r.overlaps_with %}<p class="notice warn small">{{ t("lending.overlap") }}</p>{% endif %}
+      <div class="req-actions">
+        <form method="post" action="/bookings/{{ r.id }}/decline"><input type="hidden" name="csrf_token" value="{{ csrf }}">
+          <button class="btn btn-danger btn-block" type="submit">{{ t("lending.decline") }}</button></form>
+        <form method="post" action="/bookings/{{ r.id }}/approve"><input type="hidden" name="csrf_token" value="{{ csrf }}">
+          <button class="btn btn-primary btn-block" type="submit">{{ t("lending.approve") }}</button></form>
+      </div>
+    </article>
+  {% else %}<p class="empty muted">{{ t("lending.empty.requests") }}</p>{% endfor %}
+{% elif tab == "out" %}
+  {% for r in inbox.out %}
+    <article class="card pad"><a href="/bookings/{{ r.id }}"><b>{{ r.title }}</b></a><p>{{ r.borrower_name }} · {{ r.range|range }} · <span class="badge">{{ t("status." ~ r.status) }}</span></p>
+      {% set action = "pickup" if r.status == "approved" and today >= r.start else ("return" if r.status == "active" else None) %}
+      {% if action %}<form method="post" action="/bookings/{{ r.id }}/{{ action }}"><input type="hidden" name="csrf_token" value="{{ csrf }}">
+        <input type="hidden" name="back" value="/lending?tab=out">
+        <button class="btn btn-primary" type="submit">{{ t("booking.pickup.mark") if action == "pickup" else t("booking.return.mark") }}</button></form>{% endif %}
+    </article>
+  {% else %}<p class="empty muted">{{ t("lending.empty.out") }}</p>{% endfor %}
+{% else %}
+  {% for i in inbox["items"] %}
+    <article class="card pad row between"><a href="/listings/{{ i.id }}/manage">{{ i.title }}</a><span class="badge">{{ t("status." ~ i.status) }}</span></article>
+  {% else %}<p class="empty muted">{{ t("lending.empty.items") }}</p>{% endfor %}
+  <p class="section"><a class="btn btn-primary" href="/listings/new">{{ t("nav.list") }}</a></p>
+{% endif %}
+{% endblock %}

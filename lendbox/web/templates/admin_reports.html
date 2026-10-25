@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ t("admin.title") }}{% endblock %}
+{% block content %}
+<h1>{{ t("admin.title") }}</h1>
+<div class="stack section">
+{% for r in reports %}
+  <article class="card pad req">
+    <div class="row between"><b>{{ t("admin.target." ~ r.target_type) }}: {{ r.target_label }}</b>
+      <span class="xs muted">{{ r.created_at.date() }}</span></div>
+    <p class="small">{{ r.reason }}</p>
+    <p class="xs muted">{{ r.reporter_name }}</p>
+    <div class="req-actions">
+      <form method="post" action="/admin/reports/{{ r.id }}/dismissed"><input type="hidden" name="csrf_token" value="{{ csrf }}">
+        <button class="btn btn-ghost btn-block" type="submit">{{ t("admin.dismiss") }}</button></form>
+      <form method="post" action="/admin/reports/{{ r.id }}/hidden"><input type="hidden" name="csrf_token" value="{{ csrf }}">
+        <button class="btn btn-danger btn-block" type="submit">{{ t("admin.hide") }}</button></form>
+    </div>
+  </article>
+{% else %}<p class="empty muted">{{ t("admin.empty") }}</p>{% endfor %}
+</div>
+{% endblock %}

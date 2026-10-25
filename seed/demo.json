@@ -1,0 +1,4321 @@
+{
+  "version": 1,
+  "users": [
+    {
+      "key": "u01",
+      "email": "u01@example.test",
+      "display_name": "Noa B.",
+      "is_admin": true,
+      "verified": true
+    },
+    {
+      "key": "u02",
+      "email": "u02@example.test",
+      "display_name": "Omar D.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u03",
+      "email": "u03@example.test",
+      "display_name": "Miriam K.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u04",
+      "email": "u04@example.test",
+      "display_name": "Dmitri L.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u05",
+      "email": "u05@example.test",
+      "display_name": "Hana M.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u06",
+      "email": "u06@example.test",
+      "display_name": "Liam N.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u07",
+      "email": "u07@example.test",
+      "display_name": "Yael P.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u08",
+      "email": "u08@example.test",
+      "display_name": "Samir R.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u09",
+      "email": "u09@example.test",
+      "display_name": "Alina S.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u10",
+      "email": "u10@example.test",
+      "display_name": "Dawit T.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u11",
+      "email": "u11@example.test",
+      "display_name": "Ella V.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u12",
+      "email": "u12@example.test",
+      "display_name": "Eitan W.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u13",
+      "email": "u13@example.test",
+      "display_name": "Layla Z.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u14",
+      "email": "u14@example.test",
+      "display_name": "Boris A.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u15",
+      "email": "u15@example.test",
+      "display_name": "Selam C.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u16",
+      "email": "u16@example.test",
+      "display_name": "Maya F.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u17",
+      "email": "u17@example.test",
+      "display_name": "Rami G.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u18",
+      "email": "u18@example.test",
+      "display_name": "Irina H.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u19",
+      "email": "u19@example.test",
+      "display_name": "Abel J.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u20",
+      "email": "u20@example.test",
+      "display_name": "Oliver K.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u21",
+      "email": "u21@example.test",
+      "display_name": "Tamar L.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u22",
+      "email": "u22@example.test",
+      "display_name": "Yusuf M.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u23",
+      "email": "u23@example.test",
+      "display_name": "Katya N.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u24",
+      "email": "u24@example.test",
+      "display_name": "Tigist P.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u25",
+      "email": "u25@example.test",
+      "display_name": "Amir R.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u26",
+      "email": "u26@example.test",
+      "display_name": "Grace S.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u27",
+      "email": "u27@example.test",
+      "display_name": "Lior T.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u28",
+      "email": "u28@example.test",
+      "display_name": "Nadia V.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u29",
+      "email": "u29@example.test",
+      "display_name": "Pavel W.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u30",
+      "email": "u30@example.test",
+      "display_name": "Meron Z.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u31",
+      "email": "u31@example.test",
+      "display_name": "Daniel A.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u32",
+      "email": "u32@example.test",
+      "display_name": "Salma C.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u33",
+      "email": "u33@example.test",
+      "display_name": "Lev D.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u34",
+      "email": "u34@example.test",
+      "display_name": "Rahel F.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u35",
+      "email": "u35@example.test",
+      "display_name": "Ben G.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u36",
+      "email": "u36@example.test",
+      "display_name": "Shira H.",
+      "is_admin": false,
+      "verified": true
+    },
+    {
+      "key": "u37",
+      "email": "u37@example.test",
+      "display_name": "Karim J.",
+      "is_admin": false,
+      "verified": false
+    },
+    {
+      "key": "u38",
+      "email": "u38@example.test",
+      "display_name": "Anya K.",
+      "is_admin": false,
+      "verified": false
+    },
+    {
+      "key": "u39",
+      "email": "u39@example.test",
+      "display_name": "Meseret L.",
+      "is_admin": false,
+      "verified": false
+    },
+    {
+      "key": "u40",
+      "email": "u40@example.test",
+      "display_name": "Lucy M.",
+      "is_admin": false,
+      "verified": false
+    }
+  ],
+  "communities": [
+    {
+      "slug": "israel",
+      "name": "Israel",
+      "kind": "area",
+      "area_level": "country",
+      "parent": null,
+      "rules": ""
+    },
+    {
+      "slug": "tel-aviv-yafo",
+      "name": "Tel Aviv-Yafo",
+      "kind": "area",
+      "area_level": "city",
+      "parent": "israel",
+      "rules": "Arrange a pickup time before heading out. Keep shared entrances clear while handing things over."
+    },
+    {
+      "slug": "haifa",
+      "name": "Haifa",
+      "kind": "area",
+      "area_level": "city",
+      "parent": "israel",
+      "rules": "Agree on a convenient meeting spot together. Mention stairs or a steep walk if the item is heavy."
+    },
+    {
+      "slug": "beer-sheva",
+      "name": "Be'er Sheva",
+      "kind": "area",
+      "area_level": "city",
+      "parent": "israel",
+      "rules": "Choose a shaded meeting spot for daytime pickups. Send a quick update if you are running late."
+    },
+    {
+      "slug": "florentin",
+      "name": "Florentin",
+      "kind": "area",
+      "area_level": "neighborhood",
+      "parent": "tel-aviv-yafo",
+      "rules": "Keep late pickups quiet around shared lobbies."
+    },
+    {
+      "slug": "tel-aviv-university",
+      "name": "Tel Aviv University",
+      "kind": "area",
+      "area_level": "campus",
+      "parent": "tel-aviv-yafo",
+      "rules": "Meet outside the campus gate unless you have both agreed otherwise."
+    },
+    {
+      "slug": "musicians",
+      "name": "Musicians",
+      "kind": "interest",
+      "area_level": null,
+      "parent": null,
+      "rules": "Try the gear together before pickup. Return cables neatly coiled and keep instruments in their cases."
+    },
+    {
+      "slug": "students",
+      "name": "Students",
+      "kind": "interest",
+      "area_level": null,
+      "parent": null,
+      "rules": "Share what you need for your project and when it is due. Leave time for the next person to collect the item."
+    },
+    {
+      "slug": "builders-diy",
+      "name": "Builders and DIY",
+      "kind": "interest",
+      "area_level": null,
+      "parent": null,
+      "rules": "Ask about unfamiliar tools before using them. Return bits and accessories in their labelled compartments."
+    },
+    {
+      "slug": "office-study",
+      "name": "Office and study",
+      "kind": "interest",
+      "area_level": null,
+      "parent": null,
+      "rules": "Keep borrowed equipment away from drinks. Remove your notes and papers before returning it."
+    },
+    {
+      "slug": "outdoor-camping",
+      "name": "Outdoor and camping",
+      "kind": "interest",
+      "area_level": null,
+      "parent": null,
+      "rules": "Air and dry outdoor gear before packing it. Tell the owner about any damage after a trip."
+    },
+    {
+      "slug": "parents-kids",
+      "name": "Parents and kids",
+      "kind": "interest",
+      "area_level": null,
+      "parent": null,
+      "rules": "Check the suggested age with the owner. Count small parts together and supervise children during use."
+    }
+  ],
+  "memberships": [
+    {
+      "user": "u01",
+      "community": "florentin"
+    },
+    {
+      "user": "u01",
+      "community": "musicians"
+    },
+    {
+      "user": "u02",
+      "community": "tel-aviv-university"
+    },
+    {
+      "user": "u02",
+      "community": "students"
+    },
+    {
+      "user": "u03",
+      "community": "haifa"
+    },
+    {
+      "user": "u03",
+      "community": "builders-diy"
+    },
+    {
+      "user": "u04",
+      "community": "beer-sheva"
+    },
+    {
+      "user": "u04",
+      "community": "office-study"
+    },
+    {
+      "user": "u05",
+      "community": "florentin"
+    },
+    {
+      "user": "u05",
+      "community": "outdoor-camping"
+    },
+    {
+      "user": "u06",
+      "community": "tel-aviv-university"
+    },
+    {
+      "user": "u06",
+      "community": "parents-kids"
+    },
+    {
+      "user": "u07",
+      "community": "haifa"
+    },
+    {
+      "user": "u07",
+      "community": "musicians"
+    },
+    {
+      "user": "u08",
+      "community": "beer-sheva"
+    },
+    {
+      "user": "u08",
+      "community": "students"
+    },
+    {
+      "user": "u09",
+      "community": "florentin"
+    },
+    {
+      "user": "u09",
+      "community": "builders-diy"
+    },
+    {
+      "user": "u10",
+      "community": "tel-aviv-university"
+    },
+    {
+      "user": "u10",
+      "community": "office-study"
+    },
+    {
+      "user": "u11",
+      "community": "haifa"
+    },
+    {
+      "user": "u11",
+      "community": "outdoor-camping"
+    },
+    {
+      "user": "u12",
+      "community": "beer-sheva"
+    },
+    {
+      "user": "u12",
+      "community": "parents-kids"
+    },
+    {
+      "user": "u13",
+      "community": "florentin"
+    },
+    {
+      "user": "u13",
+      "community": "musicians"
+    },
+    {
+      "user": "u14",
+      "community": "tel-aviv-university"
+    },
+    {
+      "user": "u14",
+      "community": "students"
+    },
+    {
+      "user": "u15",
+      "community": "haifa"
+    },
+    {
+      "user": "u15",
+      "community": "builders-diy"
+    },
+    {
+      "user": "u16",
+      "community": "beer-sheva"
+    },
+    {
+      "user": "u16",
+      "community": "office-study"
+    },
+    {
+      "user": "u17",
+      "community": "florentin"
+    },
+    {
+      "user": "u17",
+      "community": "outdoor-camping"
+    },
+    {
+      "user": "u18",
+      "community": "tel-aviv-university"
+    },
+    {
+      "user": "u18",
+      "community": "parents-kids"
+    },
+    {
+      "user": "u19",
+      "community": "haifa"
+    },
+    {
+      "user": "u19",
+      "community": "musicians"
+    },
+    {
+      "user": "u20",
+      "community": "beer-sheva"
+    },
+    {
+      "user": "u20",
+      "community": "students"
+    },
+    {
+      "user": "u21",
+      "community": "florentin"
+    },
+    {
+      "user": "u21",
+      "community": "builders-diy"
+    },
+    {
+      "user": "u22",
+      "community": "tel-aviv-university"
+    },
+    {
+      "user": "u22",
+      "community": "office-study"
+    },
+    {
+      "user": "u23",
+      "community": "haifa"
+    },
+    {
+      "user": "u23",
+      "community": "outdoor-camping"
+    },
+    {
+      "user": "u24",
+      "community": "beer-sheva"
+    },
+    {
+      "user": "u24",
+      "community": "parents-kids"
+    },
+    {
+      "user": "u25",
+      "community": "florentin"
+    },
+    {
+      "user": "u25",
+      "community": "musicians"
+    },
+    {
+      "user": "u26",
+      "community": "tel-aviv-university"
+    },
+    {
+      "user": "u26",
+      "community": "students"
+    },
+    {
+      "user": "u27",
+      "community": "haifa"
+    },
+    {
+      "user": "u27",
+      "community": "builders-diy"
+    },
+    {
+      "user": "u28",
+      "community": "beer-sheva"
+    },
+    {
+      "user": "u28",
+      "community": "office-study"
+    },
+    {
+      "user": "u29",
+      "community": "florentin"
+    },
+    {
+      "user": "u29",
+      "community": "outdoor-camping"
+    },
+    {
+      "user": "u30",
+      "community": "tel-aviv-university"
+    },
+    {
+      "user": "u30",
+      "community": "parents-kids"
+    },
+    {
+      "user": "u31",
+      "community": "haifa"
+    },
+    {
+      "user": "u31",
+      "community": "musicians"
+    },
+    {
+      "user": "u32",
+      "community": "beer-sheva"
+    },
+    {
+      "user": "u32",
+      "community": "students"
+    },
+    {
+      "user": "u33",
+      "community": "florentin"
+    },
+    {
+      "user": "u33",
+      "community": "builders-diy"
+    },
+    {
+      "user": "u34",
+      "community": "tel-aviv-university"
+    },
+    {
+      "user": "u34",
+      "community": "office-study"
+    },
+    {
+      "user": "u35",
+      "community": "haifa"
+    },
+    {
+      "user": "u35",
+      "community": "outdoor-camping"
+    },
+    {
+      "user": "u36",
+      "community": "beer-sheva"
+    },
+    {
+      "user": "u36",
+      "community": "parents-kids"
+    },
+    {
+      "user": "u37",
+      "community": "florentin"
+    },
+    {
+      "user": "u37",
+      "community": "musicians"
+    },
+    {
+      "user": "u38",
+      "community": "tel-aviv-university"
+    },
+    {
+      "user": "u38",
+      "community": "students"
+    },
+    {
+      "user": "u39",
+      "community": "haifa"
+    },
+    {
+      "user": "u39",
+      "community": "builders-diy"
+    },
+    {
+      "user": "u40",
+      "community": "beer-sheva"
+    },
+    {
+      "user": "u40",
+      "community": "office-study"
+    }
+  ],
+  "categories": [
+    {
+      "slug": "power-tools",
+      "name": "Power tools",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "musical-instruments",
+      "name": "Musical instruments",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "camping-gear",
+      "name": "Camping gear",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "kitchen-appliances",
+      "name": "Kitchen appliances",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "cleaning-equipment",
+      "name": "Cleaning equipment",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "garden-tools",
+      "name": "Garden tools",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "photography",
+      "name": "Photography",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "sports-equipment",
+      "name": "Sports equipment",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "event-supplies",
+      "name": "Event supplies",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "office-study",
+      "name": "Office and study",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "sewing-crafts",
+      "name": "Sewing and crafts",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "board-games",
+      "name": "Board games",
+      "booking_unit": "day",
+      "prohibited": false
+    },
+    {
+      "slug": "vehicles",
+      "name": "Vehicles",
+      "booking_unit": "day",
+      "prohibited": true
+    },
+    {
+      "slug": "weapons",
+      "name": "Weapons",
+      "booking_unit": "day",
+      "prohibited": true
+    },
+    {
+      "slug": "medication",
+      "name": "Medication",
+      "booking_unit": "day",
+      "prohibited": true
+    },
+    {
+      "slug": "child-car-seats",
+      "name": "Child car seats",
+      "booking_unit": "day",
+      "prohibited": true
+    }
+  ],
+  "listings": [
+    {
+      "key": "l001",
+      "owner": "u01",
+      "category": "power-tools",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Cordless drill with two batteries",
+      "description": "The chuck has a few scratches, but both batteries hold up well. Start on the low torque setting for small screws.",
+      "condition": "fair",
+      "price_per_unit_agorot": 2200,
+      "deposit_agorot": 35000,
+      "min_units": 3,
+      "late_fee_agorot": 1000,
+      "attributes": {
+        "power_source": "battery",
+        "consumables_included": false,
+        "voltage_v": 18,
+        "battery_included": true
+      },
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l002",
+      "owner": "u02",
+      "category": "power-tools",
+      "area": "florentin",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Compact jigsaw with wood blades",
+      "description": "This little saw is good for shelf cutouts and rounded corners. Clamp the board before you start; the spare blades are in the case.",
+      "condition": "good",
+      "price_per_unit_agorot": 2000,
+      "deposit_agorot": 25000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {
+        "power_source": "corded",
+        "consumables_included": true
+      },
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l003",
+      "owner": "u03",
+      "category": "power-tools",
+      "area": "tel-aviv-university",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Random orbit sander with dust bag",
+      "description": "The sanding pad is clean and the dust bag clips on firmly. Bring discs for your project and empty the bag outside.",
+      "condition": "good",
+      "price_per_unit_agorot": 1800,
+      "deposit_agorot": 25000,
+      "min_units": 1,
+      "late_fee_agorot": 900,
+      "attributes": {
+        "power_source": "corded",
+        "consumables_included": false
+      },
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l004",
+      "owner": "u04",
+      "category": "power-tools",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Corded hammer drill and masonry bits",
+      "description": "I use this for concrete walls, and it still runs smoothly. Check for pipes before drilling and let the bit cool between holes.",
+      "condition": "good",
+      "price_per_unit_agorot": 2500,
+      "deposit_agorot": 45000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {
+        "power_source": "corded",
+        "consumables_included": false
+      },
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l005",
+      "owner": "u05",
+      "category": "power-tools",
+      "area": "florentin",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Small rotary tool with accessory box",
+      "description": "The engraving tip has seen some use; the polishing attachments are almost new. Try your chosen attachment on scrap first.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {
+        "power_source": "corded",
+        "consumables_included": false
+      },
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l006",
+      "owner": "u06",
+      "category": "power-tools",
+      "area": "tel-aviv-university",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Hot glue gun with folding stand",
+      "description": "A simple full-size glue gun with a steady stand. Keep a scrap mat under the nozzle because it drips while warming up.",
+      "condition": "good",
+      "price_per_unit_agorot": 700,
+      "deposit_agorot": 6000,
+      "min_units": 1,
+      "late_fee_agorot": 350,
+      "attributes": {
+        "power_source": "corded",
+        "consumables_included": false
+      },
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l007",
+      "owner": "u07",
+      "category": "power-tools",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "students",
+        "builders-diy"
+      ],
+      "title": "Electric screwdriver with magnetic bits",
+      "description": "Light enough for putting together flat-pack furniture. Keep the tiny bits in the snap box so they do not disappear under the sofa.",
+      "condition": "good",
+      "price_per_unit_agorot": 1000,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 500,
+      "attributes": {
+        "power_source": "battery",
+        "consumables_included": false,
+        "voltage_v": 18,
+        "battery_included": true
+      },
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l008",
+      "owner": "u08",
+      "category": "power-tools",
+      "area": "florentin",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Heat gun with two nozzle attachments",
+      "description": "The handle is marked but the heat settings work reliably. Keep it moving and use it in a ventilated space.",
+      "condition": "good",
+      "price_per_unit_agorot": 1500,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 750,
+      "attributes": {
+        "power_source": "corded",
+        "consumables_included": false
+      },
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l009",
+      "owner": "u09",
+      "category": "power-tools",
+      "area": "tel-aviv-university",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Palm detail sander for tight corners",
+      "description": "The triangular head reaches the awkward spots on chair legs. Fit the paper carefully so the dust holes stay clear.",
+      "condition": "good",
+      "price_per_unit_agorot": 1500,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 750,
+      "attributes": {
+        "power_source": "corded",
+        "consumables_included": false
+      },
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l010",
+      "owner": "u10",
+      "category": "power-tools",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Manual staple gun and depth guide",
+      "description": "The trigger is firm and the guide makes repeat jobs easier. Test the staple length on an offcut before working on fabric.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 6000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {
+        "power_source": "manual",
+        "consumables_included": false
+      },
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l011",
+      "owner": "u11",
+      "category": "musical-instruments",
+      "area": "florentin",
+      "interests": [
+        "musicians"
+      ],
+      "title": "61-key portable keyboard with stand",
+      "description": "All keys work and the folding stand is steady on a level floor. The sustain pedal goes in the side pocket of the bag.",
+      "condition": "good",
+      "price_per_unit_agorot": 6000,
+      "deposit_agorot": 90000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {
+        "instrument_family": "keys",
+        "case_included": true,
+        "skill_tier": "student",
+        "accessories": [
+          "power supply"
+        ]
+      },
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l012",
+      "owner": "u12",
+      "category": "musical-instruments",
+      "area": "tel-aviv-university",
+      "interests": [
+        "musicians"
+      ],
+      "title": "Full-size acoustic guitar in padded case",
+      "description": "The neck feels comfortable and there is a small cosmetic mark near the bridge. Tune gently after the trip before you start playing.",
+      "condition": "good",
+      "price_per_unit_agorot": 4500,
+      "deposit_agorot": 50000,
+      "min_units": 2,
+      "late_fee_agorot": 1000,
+      "attributes": {
+        "instrument_family": "strings",
+        "case_included": true,
+        "skill_tier": "student",
+        "accessories": []
+      },
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l013",
+      "owner": "u13",
+      "category": "musical-instruments",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "musicians"
+      ],
+      "title": "Small practice amplifier with cable",
+      "description": "A quiet-room amp with clean controls and a working headphone socket. Turn the volume down before plugging in your instrument.",
+      "condition": "good",
+      "price_per_unit_agorot": 2500,
+      "deposit_agorot": 35000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {
+        "instrument_family": "audio_gear",
+        "case_included": false,
+        "skill_tier": "student",
+        "accessories": [
+          "power supply"
+        ]
+      },
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l014",
+      "owner": "u14",
+      "category": "musical-instruments",
+      "area": "florentin",
+      "interests": [
+        "musicians"
+      ],
+      "title": "Cajon with padded seat and carry bag",
+      "description": "The front panel has a warm sound and a few shoe scuffs near the base. Sit near the front edge for a clearer bass note.",
+      "condition": "fair",
+      "price_per_unit_agorot": 2000,
+      "deposit_agorot": 35000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {
+        "instrument_family": "percussion",
+        "case_included": true,
+        "skill_tier": "student",
+        "accessories": []
+      },
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l015",
+      "owner": "u15",
+      "category": "musical-instruments",
+      "area": "tel-aviv-university",
+      "interests": [
+        "musicians"
+      ],
+      "title": "Student violin with shoulder rest",
+      "description": "The bow and case are tidy, and the strings were changed recently. Please loosen the bow before packing it away.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 50000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {
+        "instrument_family": "strings",
+        "case_included": true,
+        "skill_tier": "student",
+        "accessories": []
+      },
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l016",
+      "owner": "u16",
+      "category": "musical-instruments",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "musicians"
+      ],
+      "title": "Pair of bongos with adjustable stand",
+      "description": "The heads are unmarked and the stand folds into a slim bag. Tighten the wing nuts by hand rather than using pliers.",
+      "condition": "good",
+      "price_per_unit_agorot": 1800,
+      "deposit_agorot": 30000,
+      "min_units": 1,
+      "late_fee_agorot": 900,
+      "attributes": {
+        "instrument_family": "percussion",
+        "case_included": true,
+        "skill_tier": "student",
+        "accessories": []
+      },
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l017",
+      "owner": "u17",
+      "category": "musical-instruments",
+      "area": "florentin",
+      "interests": [
+        "musicians"
+      ],
+      "title": "32-key melodica with spare mouthpiece",
+      "description": "A cheerful little instrument in a hard case. Let the tube dry fully before closing the lid.",
+      "condition": "good",
+      "price_per_unit_agorot": 1000,
+      "deposit_agorot": 15000,
+      "min_units": 1,
+      "late_fee_agorot": 500,
+      "attributes": {
+        "instrument_family": "wind",
+        "case_included": true,
+        "skill_tier": "student",
+        "accessories": []
+      },
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l018",
+      "owner": "u18",
+      "category": "musical-instruments",
+      "area": "tel-aviv-university",
+      "interests": [
+        "musicians"
+      ],
+      "title": "Four-input audio mixer with power supply",
+      "description": "The faders move cleanly and the channel labels are easy to read. Start with the gain down to avoid a loud surprise.",
+      "condition": "good",
+      "price_per_unit_agorot": 3500,
+      "deposit_agorot": 70000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {
+        "instrument_family": "audio_gear",
+        "case_included": false,
+        "skill_tier": "student",
+        "accessories": [
+          "power supply"
+        ]
+      },
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l019",
+      "owner": "u19",
+      "category": "musical-instruments",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "musicians"
+      ],
+      "title": "Weighted 88-key keyboard with bench",
+      "description": "The action is even across the keyboard, though the case is heavy. Bring someone to help carry it and keep the pedal cable clear of feet.",
+      "condition": "good",
+      "price_per_unit_agorot": 8500,
+      "deposit_agorot": 180000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {
+        "instrument_family": "keys",
+        "case_included": true,
+        "skill_tier": "student",
+        "accessories": [
+          "power supply"
+        ]
+      },
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l020",
+      "owner": "u20",
+      "category": "musical-instruments",
+      "area": "florentin",
+      "interests": [
+        "musicians"
+      ],
+      "title": "Pair of folding music stands",
+      "description": "Both height locks hold well and the ledges fit a thick score. Open the feet fully before adding your music.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 12000,
+      "min_units": 3,
+      "late_fee_agorot": 0,
+      "attributes": {
+        "instrument_family": "audio_gear",
+        "case_included": false,
+        "skill_tier": "student",
+        "accessories": []
+      },
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l021",
+      "owner": "u21",
+      "category": "camping-gear",
+      "area": "tel-aviv-university",
+      "interests": [
+        "outdoor-camping"
+      ],
+      "title": "Two-person tent with groundsheet",
+      "description": "The flysheet is dry and all poles are present. Practise pitching it once before leaving because the short pole belongs at the door.",
+      "condition": "good",
+      "price_per_unit_agorot": 2500,
+      "deposit_agorot": 35000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l022",
+      "owner": "u22",
+      "category": "camping-gear",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "outdoor-camping"
+      ],
+      "title": "Four-person dome tent with repair kit",
+      "description": "Roomy enough for a small group, with a patched pinhole on the outer layer. Pack the inner tent separately if it gets damp.",
+      "condition": "good",
+      "price_per_unit_agorot": 4500,
+      "deposit_agorot": 65000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l023",
+      "owner": "u23",
+      "category": "camping-gear",
+      "area": "florentin",
+      "interests": [
+        "outdoor-camping"
+      ],
+      "title": "Pair of three-season sleeping bags",
+      "description": "These bags are clean and stored loose between trips. Air them after use before putting them back in the compression sacks.",
+      "condition": "good",
+      "price_per_unit_agorot": 2500,
+      "deposit_agorot": 35000,
+      "min_units": 2,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l024",
+      "owner": "u24",
+      "category": "camping-gear",
+      "area": "tel-aviv-university",
+      "interests": [
+        "students",
+        "outdoor-camping"
+      ],
+      "title": "Inflatable sleeping mat with hand pump",
+      "description": "The valve seals properly and the pump saves a lot of effort. Clear sharp stones from the ground before laying it down.",
+      "condition": "good",
+      "price_per_unit_agorot": 1500,
+      "deposit_agorot": 25000,
+      "min_units": 1,
+      "late_fee_agorot": 750,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l025",
+      "owner": "u25",
+      "category": "camping-gear",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "outdoor-camping"
+      ],
+      "title": "Folding camp table for four",
+      "description": "The tabletop has cup marks but the hinges lock securely. Set the adjustable foot last to stop it wobbling.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 20000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l026",
+      "owner": "u26",
+      "category": "camping-gear",
+      "area": "florentin",
+      "interests": [
+        "outdoor-camping"
+      ],
+      "title": "Two low camp chairs with carry sleeves",
+      "description": "Comfortable chairs with intact mesh and a small stain on one sleeve. Let sandy feet dry before folding them into the fabric.",
+      "condition": "good",
+      "price_per_unit_agorot": 1200,
+      "deposit_agorot": 20000,
+      "min_units": 1,
+      "late_fee_agorot": 600,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l027",
+      "owner": "u27",
+      "category": "camping-gear",
+      "area": "tel-aviv-university",
+      "interests": [
+        "outdoor-camping"
+      ],
+      "title": "Rechargeable camping lantern pair",
+      "description": "Both lanterns charge from the included cable and have a low setting for bedtime. Keep the charging port covers closed outdoors.",
+      "condition": "fair",
+      "price_per_unit_agorot": 1000,
+      "deposit_agorot": 15000,
+      "min_units": 1,
+      "late_fee_agorot": 500,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l028",
+      "owner": "u28",
+      "category": "camping-gear",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "outdoor-camping"
+      ],
+      "title": "Forty-litre hiking pack with rain cover",
+      "description": "The hip belt is sound and all buckles work. Adjust the back length while the pack is empty, then tighten it once loaded.",
+      "condition": "good",
+      "price_per_unit_agorot": 1800,
+      "deposit_agorot": 40000,
+      "min_units": 1,
+      "late_fee_agorot": 900,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l029",
+      "owner": "u29",
+      "category": "camping-gear",
+      "area": "florentin",
+      "interests": [
+        "outdoor-camping"
+      ],
+      "title": "Insulated picnic cooler with ice packs",
+      "description": "The lid shuts firmly and there is space for a family lunch. Freeze the flat packs overnight for the best result.",
+      "condition": "good",
+      "price_per_unit_agorot": 1200,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 600,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l030",
+      "owner": "u30",
+      "category": "camping-gear",
+      "area": "tel-aviv-university",
+      "interests": [
+        "students",
+        "outdoor-camping"
+      ],
+      "title": "Folding foam sleeping pads for two",
+      "description": "No valves to worry about and the folds are still firm. Brush off grit before stacking the pads for the trip home.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 8000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l031",
+      "owner": "u01",
+      "category": "kitchen-appliances",
+      "area": "tel-aviv-yafo",
+      "interests": [],
+      "title": "Stand mixer with dough hook and whisk",
+      "description": "The bowl is shiny and the speed dial turns smoothly. Start slowly when adding flour so it stays in the bowl.",
+      "condition": "good",
+      "price_per_unit_agorot": 3500,
+      "deposit_agorot": 90000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l032",
+      "owner": "u02",
+      "category": "kitchen-appliances",
+      "area": "florentin",
+      "interests": [],
+      "title": "Large soup pot with glass lid",
+      "description": "A sturdy pot with a few stirring marks inside. Use wooden utensils and let the glass lid cool before washing it.",
+      "condition": "good",
+      "price_per_unit_agorot": 1000,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 500,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l033",
+      "owner": "u03",
+      "category": "kitchen-appliances",
+      "area": "tel-aviv-university",
+      "interests": [
+        "students"
+      ],
+      "title": "Sandwich press with removable plates",
+      "description": "The plates are clean and release easily. Let them cool before unclipping them for a rinse.",
+      "condition": "good",
+      "price_per_unit_agorot": 1200,
+      "deposit_agorot": 15000,
+      "min_units": 1,
+      "late_fee_agorot": 600,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l034",
+      "owner": "u04",
+      "category": "kitchen-appliances",
+      "area": "tel-aviv-yafo",
+      "interests": [],
+      "title": "Digital kitchen scales and mixing bowls",
+      "description": "The scales read consistently and the bowls nest neatly. Put the scales on a hard surface before pressing zero.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 8000,
+      "min_units": 2,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l035",
+      "owner": "u05",
+      "category": "kitchen-appliances",
+      "area": "florentin",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Eight-litre drink dispenser with tap",
+      "description": "The tap seals well and the wide lid makes cleaning simple. Test it with water before filling it with anything sticky.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l036",
+      "owner": "u06",
+      "category": "kitchen-appliances",
+      "area": "tel-aviv-university",
+      "interests": [],
+      "title": "Pasta roller with drying rack",
+      "description": "The rollers are smooth and the table clamp is included. Dust the dough lightly and clean the rollers with a dry brush.",
+      "condition": "good",
+      "price_per_unit_agorot": 1800,
+      "deposit_agorot": 25000,
+      "min_units": 1,
+      "late_fee_agorot": 900,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l037",
+      "owner": "u07",
+      "category": "kitchen-appliances",
+      "area": "tel-aviv-yafo",
+      "interests": [],
+      "title": "Blender with glass jug and lid",
+      "description": "The jug has no chips and the lid fits snugly. Add liquid first and hold the lid when starting a thick mixture.",
+      "condition": "good",
+      "price_per_unit_agorot": 1800,
+      "deposit_agorot": 25000,
+      "min_units": 1,
+      "late_fee_agorot": 900,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l038",
+      "owner": "u08",
+      "category": "kitchen-appliances",
+      "area": "florentin",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Waffle maker with batter scoop",
+      "description": "Both plates heat evenly and the scoop helps avoid overflow. Wait for the indicator before lifting the lid.",
+      "condition": "good",
+      "price_per_unit_agorot": 1500,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 750,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l039",
+      "owner": "u09",
+      "category": "kitchen-appliances",
+      "area": "tel-aviv-university",
+      "interests": [],
+      "title": "Large roasting tray with wire rack",
+      "description": "The tray has normal oven marks and the rack sits flat. Line the base if you want an easier cleanup after roasting.",
+      "condition": "good",
+      "price_per_unit_agorot": 800,
+      "deposit_agorot": 12000,
+      "min_units": 3,
+      "late_fee_agorot": 400,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l040",
+      "owner": "u10",
+      "category": "kitchen-appliances",
+      "area": "tel-aviv-yafo",
+      "interests": [],
+      "title": "Electric citrus press with two cones",
+      "description": "The motor is quiet and the juice bowl pours cleanly. Choose the smaller cone for lemons and rinse the pulp filter promptly.",
+      "condition": "fair",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 15000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l041",
+      "owner": "u11",
+      "category": "cleaning-equipment",
+      "area": "florentin",
+      "interests": [],
+      "title": "Upholstery cleaner with stair nozzle",
+      "description": "The tanks are clear and the hose is flexible. Try a hidden patch first and return the tanks empty and rinsed.",
+      "condition": "good",
+      "price_per_unit_agorot": 6000,
+      "deposit_agorot": 120000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l042",
+      "owner": "u12",
+      "category": "cleaning-equipment",
+      "area": "tel-aviv-university",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Wet and dry vacuum with long hose",
+      "description": "It has a few workshop scuffs and strong suction. Use the correct filter for dry dust and empty the drum before returning it.",
+      "condition": "good",
+      "price_per_unit_agorot": 4500,
+      "deposit_agorot": 80000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l043",
+      "owner": "u13",
+      "category": "cleaning-equipment",
+      "area": "tel-aviv-yafo",
+      "interests": [],
+      "title": "Steam mop with three washable pads",
+      "description": "The handle folds well and the pads are freshly washed. Check whether your flooring tolerates steam before switching it on.",
+      "condition": "good",
+      "price_per_unit_agorot": 3000,
+      "deposit_agorot": 45000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l044",
+      "owner": "u14",
+      "category": "cleaning-equipment",
+      "area": "florentin",
+      "interests": [],
+      "title": "Window vacuum with spray bottle",
+      "description": "The blade is smooth and the little tank is easy to empty. Work from top to bottom to keep streaks down.",
+      "condition": "good",
+      "price_per_unit_agorot": 2200,
+      "deposit_agorot": 35000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l045",
+      "owner": "u15",
+      "category": "cleaning-equipment",
+      "area": "tel-aviv-university",
+      "interests": [],
+      "title": "Long-handled cobweb brush",
+      "description": "The telescopic handle locks firmly and reaches high corners. Shorten it before walking through doorways.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 7000,
+      "min_units": 2,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l046",
+      "owner": "u16",
+      "category": "cleaning-equipment",
+      "area": "tel-aviv-yafo",
+      "interests": [],
+      "title": "Bucket and flat mop set",
+      "description": "The wringer turns freely and there are two clean mop heads. Wring well on wooden floors rather than leaving standing water.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 8000,
+      "min_units": 1,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l047",
+      "owner": "u17",
+      "category": "cleaning-equipment",
+      "area": "florentin",
+      "interests": [],
+      "title": "Handheld car-interior vacuum",
+      "description": "A compact vacuum for crumbs on seats, with a narrow crevice tool. This is cleaning equipment only; no vehicle is being lent.",
+      "condition": "good",
+      "price_per_unit_agorot": 1200,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 600,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l048",
+      "owner": "u18",
+      "category": "cleaning-equipment",
+      "area": "tel-aviv-university",
+      "interests": [],
+      "title": "Cordless scrubber with soft brush head",
+      "description": "The brush is in good shape and the grip stays comfortable. Start with the soft head on delicate tiles.",
+      "condition": "good",
+      "price_per_unit_agorot": 1800,
+      "deposit_agorot": 25000,
+      "min_units": 1,
+      "late_fee_agorot": 900,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l049",
+      "owner": "u19",
+      "category": "cleaning-equipment",
+      "area": "tel-aviv-yafo",
+      "interests": [],
+      "title": "Extendable window squeegee kit",
+      "description": "The rubber edge was replaced recently and the pole sections twist tight. Wipe the edge after each pass for a cleaner finish.",
+      "condition": "good",
+      "price_per_unit_agorot": 800,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 400,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l050",
+      "owner": "u20",
+      "category": "cleaning-equipment",
+      "area": "florentin",
+      "interests": [
+        "students"
+      ],
+      "title": "Laundry drying rack with mesh shelf",
+      "description": "The frame is straight and the shelf works well for jumpers. Open it fully before placing heavier wet towels on it.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 10000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l051",
+      "owner": "u21",
+      "category": "garden-tools",
+      "area": "tel-aviv-university",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Hand trowel and fork in canvas roll",
+      "description": "The handles are smooth and the metal has normal soil marks. Dry the tools before rolling them back into the canvas.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 6000,
+      "min_units": 1,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l052",
+      "owner": "u22",
+      "category": "garden-tools",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Long-handled pruning loppers",
+      "description": "The blades meet cleanly and the grips are intact. Keep cuts to small branches rather than forcing the handles.",
+      "condition": "good",
+      "price_per_unit_agorot": 800,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 400,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l053",
+      "owner": "u23",
+      "category": "garden-tools",
+      "area": "florentin",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Ten-metre garden hose with spray head",
+      "description": "The connectors seal well and the spray head has a gentle setting. Turn off the tap before changing the nozzle.",
+      "condition": "fair",
+      "price_per_unit_agorot": 800,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 400,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l054",
+      "owner": "u24",
+      "category": "garden-tools",
+      "area": "tel-aviv-university",
+      "interests": [],
+      "title": "Balcony watering can with narrow spout",
+      "description": "A light can that reaches between crowded pots. Fill it only as high as you can carry comfortably.",
+      "condition": "good",
+      "price_per_unit_agorot": 300,
+      "deposit_agorot": 4000,
+      "min_units": 1,
+      "late_fee_agorot": 150,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l055",
+      "owner": "u25",
+      "category": "garden-tools",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Folding garden kneeler with side handles",
+      "description": "The padding is firm and the hinges click securely. Put it on flat ground before leaning on the handles.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 10000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l056",
+      "owner": "u26",
+      "category": "garden-tools",
+      "area": "florentin",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Manual lawn edger with wooden handle",
+      "description": "The edge is sharp enough for tidy borders and the handle is solid. Work in short sections while the soil is slightly damp.",
+      "condition": "good",
+      "price_per_unit_agorot": 600,
+      "deposit_agorot": 8000,
+      "min_units": 2,
+      "late_fee_agorot": 300,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l057",
+      "owner": "u27",
+      "category": "garden-tools",
+      "area": "tel-aviv-university",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Leaf rake with adjustable fan",
+      "description": "The sliding collar holds its position and the tips are straight. Use the narrow setting around small plants.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 6000,
+      "min_units": 1,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l058",
+      "owner": "u28",
+      "category": "garden-tools",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Set of three planting trays and dibber",
+      "description": "The trays have drainage holes and no cracks. Wash out old compost before starting new seedlings.",
+      "condition": "good",
+      "price_per_unit_agorot": 300,
+      "deposit_agorot": 4000,
+      "min_units": 3,
+      "late_fee_agorot": 150,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l059",
+      "owner": "u29",
+      "category": "garden-tools",
+      "area": "florentin",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Hand pruning saw with blade cover",
+      "description": "The teeth are sharp and the cover clips on tightly. Pull gently and let the saw do the work.",
+      "condition": "good",
+      "price_per_unit_agorot": 800,
+      "deposit_agorot": 10000,
+      "min_units": 1,
+      "late_fee_agorot": 400,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l060",
+      "owner": "u30",
+      "category": "garden-tools",
+      "area": "tel-aviv-university",
+      "interests": [
+        "builders-diy"
+      ],
+      "title": "Compost sieve with wooden frame",
+      "description": "The mesh is firmly attached and the frame is easy to hold. Use small batches so the sieve stays manageable.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 6000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l061",
+      "owner": "u01",
+      "category": "photography",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "students"
+      ],
+      "title": "Lightweight tripod with phone clamp",
+      "description": "The leg clips hold securely and the head rotates smoothly. Hang a small bag underneath if the weather is breezy.",
+      "condition": "good",
+      "price_per_unit_agorot": 1500,
+      "deposit_agorot": 25000,
+      "min_units": 1,
+      "late_fee_agorot": 750,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l062",
+      "owner": "u02",
+      "category": "photography",
+      "area": "florentin",
+      "interests": [],
+      "title": "Two softbox lights with fabric diffusers",
+      "description": "Both bulbs work and the diffusers are clean. Let the lights cool before folding the fabric around them.",
+      "condition": "good",
+      "price_per_unit_agorot": 4500,
+      "deposit_agorot": 80000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l063",
+      "owner": "u03",
+      "category": "photography",
+      "area": "tel-aviv-university",
+      "interests": [],
+      "title": "Collapsible reflector with five surfaces",
+      "description": "The cover zips well and the silver side has only light creases. Fold it away from your face until you get used to the spring frame.",
+      "condition": "good",
+      "price_per_unit_agorot": 800,
+      "deposit_agorot": 10000,
+      "min_units": 1,
+      "late_fee_agorot": 400,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l064",
+      "owner": "u04",
+      "category": "photography",
+      "area": "tel-aviv-yafo",
+      "interests": [],
+      "title": "Compact camera slider with carry sleeve",
+      "description": "The carriage moves quietly over the short rail. Level both ends before filming a slow shot.",
+      "condition": "good",
+      "price_per_unit_agorot": 3000,
+      "deposit_agorot": 50000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l065",
+      "owner": "u05",
+      "category": "photography",
+      "area": "florentin",
+      "interests": [],
+      "title": "Tabletop light tent with backdrop sheets",
+      "description": "The white sheet has a faint crease that disappears behind most objects. Curve the sheet gently instead of making a sharp fold.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 25000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l066",
+      "owner": "u06",
+      "category": "photography",
+      "area": "tel-aviv-university",
+      "interests": [
+        "musicians",
+        "students"
+      ],
+      "title": "Clip-on microphone pair with cable pouch",
+      "description": "Both clips grip properly and the cables are labelled. Make a short recording to check clothing noise before the main take.",
+      "condition": "fair",
+      "price_per_unit_agorot": 2200,
+      "deposit_agorot": 40000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l067",
+      "owner": "u07",
+      "category": "photography",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "students"
+      ],
+      "title": "Overhead camera arm with desk clamp",
+      "description": "The joints lock firmly and the clamp pads are intact. Keep the camera above the desk rather than extended into a walkway.",
+      "condition": "good",
+      "price_per_unit_agorot": 2000,
+      "deposit_agorot": 35000,
+      "min_units": 2,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l068",
+      "owner": "u08",
+      "category": "photography",
+      "area": "florentin",
+      "interests": [],
+      "title": "Small LED panel with rechargeable battery",
+      "description": "The brightness control works well and the battery is topped up. Use the diffuser when lighting a face at close range.",
+      "condition": "good",
+      "price_per_unit_agorot": 2500,
+      "deposit_agorot": 45000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l069",
+      "owner": "u09",
+      "category": "photography",
+      "area": "tel-aviv-university",
+      "interests": [],
+      "title": "Background stand with grey cloth",
+      "description": "The poles fit together neatly and the cloth is freshly aired. Weigh down the feet and keep people clear of the crossbar.",
+      "condition": "good",
+      "price_per_unit_agorot": 2500,
+      "deposit_agorot": 40000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l070",
+      "owner": "u10",
+      "category": "photography",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "musicians",
+        "students"
+      ],
+      "title": "Compact field recorder with wind cover",
+      "description": "The buttons are easy to use and the card slot closes properly. Check the recording level with headphones before leaving it running.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 60000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l071",
+      "owner": "u11",
+      "category": "sports-equipment",
+      "area": "florentin",
+      "interests": [
+        "outdoor-camping"
+      ],
+      "title": "Pair of adjustable trekking poles",
+      "description": "The locks stay firm and the wrist straps are clean. Match both lengths before walking on uneven ground.",
+      "condition": "good",
+      "price_per_unit_agorot": 800,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 400,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l072",
+      "owner": "u12",
+      "category": "sports-equipment",
+      "area": "tel-aviv-university",
+      "interests": [
+        "outdoor-camping",
+        "parents-kids"
+      ],
+      "title": "Badminton set with four rackets",
+      "description": "The grips show some wear but the strings are sound. Put the shuttlecocks back in the tube so they keep their shape.",
+      "condition": "good",
+      "price_per_unit_agorot": 1000,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 500,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l073",
+      "owner": "u13",
+      "category": "sports-equipment",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "outdoor-camping",
+        "parents-kids"
+      ],
+      "title": "Volleyball and compact hand pump",
+      "description": "The ball holds air well and the needle lives inside the pump handle. Moisten the needle before inflating.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 8000,
+      "min_units": 1,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l074",
+      "owner": "u14",
+      "category": "sports-equipment",
+      "area": "florentin",
+      "interests": [],
+      "title": "Two yoga mats with carrying straps",
+      "description": "Both mats are clean with a little wear at the edges. Roll them loosely once they are dry.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l075",
+      "owner": "u15",
+      "category": "sports-equipment",
+      "area": "tel-aviv-university",
+      "interests": [],
+      "title": "Adjustable dumbbell pair with collars",
+      "description": "The plates fit snugly and the collars turn easily. Tighten both sides before lifting and use a mat under the weights.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 50000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l076",
+      "owner": "u16",
+      "category": "sports-equipment",
+      "area": "tel-aviv-yafo",
+      "interests": [],
+      "title": "Table tennis net with four paddles",
+      "description": "The clamps fit an ordinary dining table and the paddle faces are intact. Protect the tabletop with the included felt pads.",
+      "condition": "good",
+      "price_per_unit_agorot": 800,
+      "deposit_agorot": 15000,
+      "min_units": 1,
+      "late_fee_agorot": 400,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l077",
+      "owner": "u17",
+      "category": "sports-equipment",
+      "area": "florentin",
+      "interests": [
+        "outdoor-camping",
+        "parents-kids"
+      ],
+      "title": "Frisbee and garden throwing targets",
+      "description": "The discs are bright enough to find in grass and the targets fold flat. Leave a clear space around other park users.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 8000,
+      "min_units": 3,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l078",
+      "owner": "u18",
+      "category": "sports-equipment",
+      "area": "tel-aviv-university",
+      "interests": [],
+      "title": "Balance board with non-slip surface",
+      "description": "The top has good grip and the rocker is smooth. Start beside a stable support until you find your balance.",
+      "condition": "good",
+      "price_per_unit_agorot": 1000,
+      "deposit_agorot": 18000,
+      "min_units": 2,
+      "late_fee_agorot": 500,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l079",
+      "owner": "u19",
+      "category": "sports-equipment",
+      "area": "tel-aviv-yafo",
+      "interests": [
+        "outdoor-camping",
+        "parents-kids"
+      ],
+      "title": "Football training cones and ball",
+      "description": "The cones are flexible and the ball is ready to use. Spread the cones out before warming up so nobody trips over the bag.",
+      "condition": "fair",
+      "price_per_unit_agorot": 800,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 400,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l080",
+      "owner": "u20",
+      "category": "sports-equipment",
+      "area": "florentin",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Portable basketball practice hoop",
+      "description": "The hooks fit many indoor doors and have padded backs. Check the door clearance before trying a shot.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 15000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l081",
+      "owner": "u21",
+      "category": "event-supplies",
+      "area": "haifa",
+      "interests": [
+        "students",
+        "office-study"
+      ],
+      "title": "Portable projector with HDMI cable",
+      "description": "The picture is clear in a dim room and the lens cap is included. Place it on a steady table and leave space around the vent.",
+      "condition": "good",
+      "price_per_unit_agorot": 8000,
+      "deposit_agorot": 160000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l082",
+      "owner": "u22",
+      "category": "event-supplies",
+      "area": "haifa",
+      "interests": [
+        "office-study"
+      ],
+      "title": "Pull-up projection screen with carry bag",
+      "description": "The screen rises smoothly and has a small mark near the bottom edge. Keep fingers away from the folding feet.",
+      "condition": "good",
+      "price_per_unit_agorot": 2500,
+      "deposit_agorot": 45000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l083",
+      "owner": "u23",
+      "category": "event-supplies",
+      "area": "haifa",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Twenty reusable party cups in crate",
+      "description": "The cups are sturdy and the crate keeps the set together. Count them before packing up and return them washed.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 10000,
+      "min_units": 1,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l084",
+      "owner": "u24",
+      "category": "event-supplies",
+      "area": "haifa",
+      "interests": [],
+      "title": "String lights with warm white bulbs",
+      "description": "Every bulb works and the cable is neatly coiled. Keep the power connection indoors and avoid pulling on the bulbs.",
+      "condition": "good",
+      "price_per_unit_agorot": 1200,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 600,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l085",
+      "owner": "u25",
+      "category": "event-supplies",
+      "area": "haifa",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Folding cake stand with three tiers",
+      "description": "The plates sit level and wipe clean easily. Build it from the bottom up on a firm table.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l086",
+      "owner": "u26",
+      "category": "event-supplies",
+      "area": "haifa",
+      "interests": [
+        "musicians"
+      ],
+      "title": "Battery speaker with microphone",
+      "description": "The microphone is clear and the battery lasts through a small gathering. Start the volume low before the first announcement.",
+      "condition": "good",
+      "price_per_unit_agorot": 4500,
+      "deposit_agorot": 90000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l087",
+      "owner": "u27",
+      "category": "event-supplies",
+      "area": "haifa",
+      "interests": [],
+      "title": "Six folding stools with carry strap",
+      "description": "The hinges are sound and one seat has a paint speck. Check that each stool is fully open before sitting down.",
+      "condition": "good",
+      "price_per_unit_agorot": 1800,
+      "deposit_agorot": 30000,
+      "min_units": 1,
+      "late_fee_agorot": 900,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l088",
+      "owner": "u28",
+      "category": "event-supplies",
+      "area": "haifa",
+      "interests": [],
+      "title": "Insulated hot-drink urn with tap",
+      "description": "The lid locks properly and the tap does not drip. Test the pour with cold water before serving hot drinks.",
+      "condition": "good",
+      "price_per_unit_agorot": 2500,
+      "deposit_agorot": 45000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l089",
+      "owner": "u29",
+      "category": "event-supplies",
+      "area": "haifa",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Fabric bunting and reusable sign board",
+      "description": "The fabric is clean and the board wipes off well. Use washable markers and fold the bunting loosely.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 8000,
+      "min_units": 2,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l090",
+      "owner": "u30",
+      "category": "event-supplies",
+      "area": "haifa",
+      "interests": [
+        "students",
+        "office-study"
+      ],
+      "title": "Small projector with tabletop stand",
+      "description": "A compact setup for a living-room film night, with a tidy power lead. Focus the image after moving the stand into place.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 100000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l091",
+      "owner": "u01",
+      "category": "office-study",
+      "area": "haifa",
+      "interests": [
+        "office-study"
+      ],
+      "title": "A3 paper trimmer with finger guard",
+      "description": "The guide marks are clear and the blade slides smoothly. Cut a few sheets at a time for a straight edge.",
+      "condition": "good",
+      "price_per_unit_agorot": 1000,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 500,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l092",
+      "owner": "u02",
+      "category": "office-study",
+      "area": "haifa",
+      "interests": [
+        "students",
+        "office-study"
+      ],
+      "title": "Document stand with adjustable angle",
+      "description": "The support folds flat and holds a heavy workbook. Set the angle before adding your papers.",
+      "condition": "fair",
+      "price_per_unit_agorot": 400,
+      "deposit_agorot": 6000,
+      "min_units": 1,
+      "late_fee_agorot": 200,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l093",
+      "owner": "u03",
+      "category": "office-study",
+      "area": "haifa",
+      "interests": [
+        "students",
+        "office-study"
+      ],
+      "title": "Desk lamp with broad adjustable head",
+      "description": "The joints stay in place and the light is even across a desk. Angle it away from a glossy screen to reduce glare.",
+      "condition": "good",
+      "price_per_unit_agorot": 700,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 350,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l094",
+      "owner": "u04",
+      "category": "office-study",
+      "area": "haifa",
+      "interests": [
+        "students",
+        "office-study"
+      ],
+      "title": "Portable whiteboard with marker tray",
+      "description": "The surface has faint old notes but wipes clean. Use dry-erase pens and leave the tray attached for transport.",
+      "condition": "good",
+      "price_per_unit_agorot": 1500,
+      "deposit_agorot": 30000,
+      "min_units": 1,
+      "late_fee_agorot": 750,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l095",
+      "owner": "u05",
+      "category": "office-study",
+      "area": "haifa",
+      "interests": [
+        "students",
+        "office-study"
+      ],
+      "title": "Folding laptop stand and cable clips",
+      "description": "The stand is firm on a desk and fits a medium laptop. Set both feet at the same height before placing the computer.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 10000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l096",
+      "owner": "u06",
+      "category": "office-study",
+      "area": "haifa",
+      "interests": [
+        "office-study"
+      ],
+      "title": "Heavy-duty hole punch with paper guide",
+      "description": "The handle moves freely and the guide locks in place. Empty the little paper tray before carrying it home.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 10000,
+      "min_units": 3,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l097",
+      "owner": "u07",
+      "category": "office-study",
+      "area": "haifa",
+      "interests": [
+        "office-study"
+      ],
+      "title": "Desktop laminator with corner cutter",
+      "description": "The rollers feed evenly and the cutter is sharp. Let the machine warm up fully before the first pouch.",
+      "condition": "good",
+      "price_per_unit_agorot": 1200,
+      "deposit_agorot": 20000,
+      "min_units": 1,
+      "late_fee_agorot": 600,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l098",
+      "owner": "u08",
+      "category": "office-study",
+      "area": "haifa",
+      "interests": [
+        "students",
+        "office-study"
+      ],
+      "title": "Book stand with page clips",
+      "description": "The clips are padded and the base does not slide easily. Open the book gently before setting the clips against the pages.",
+      "condition": "good",
+      "price_per_unit_agorot": 400,
+      "deposit_agorot": 5000,
+      "min_units": 1,
+      "late_fee_agorot": 200,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l099",
+      "owner": "u09",
+      "category": "office-study",
+      "area": "haifa",
+      "interests": [
+        "students",
+        "office-study"
+      ],
+      "title": "Compact label maker with spare tape",
+      "description": "The keys respond well and a part-used tape roll is fitted. Preview the label before printing to save tape.",
+      "condition": "good",
+      "price_per_unit_agorot": 1000,
+      "deposit_agorot": 18000,
+      "min_units": 1,
+      "late_fee_agorot": 500,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l100",
+      "owner": "u10",
+      "category": "office-study",
+      "area": "haifa",
+      "interests": [
+        "students",
+        "office-study"
+      ],
+      "title": "Rolling presentation easel with pad clips",
+      "description": "The wheels lock firmly and the height adjustment works. Lock the wheels before writing near the top of the pad.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 40000,
+      "min_units": 2,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l101",
+      "owner": "u11",
+      "category": "sewing-crafts",
+      "area": "beer-sheva",
+      "interests": [],
+      "title": "Basic sewing machine with pedal and case",
+      "description": "The stitch dial is clear and the pedal runs smoothly. Try a scrap of your fabric before starting the seam.",
+      "condition": "good",
+      "price_per_unit_agorot": 4000,
+      "deposit_agorot": 90000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l102",
+      "owner": "u12",
+      "category": "sewing-crafts",
+      "area": "beer-sheva",
+      "interests": [
+        "students",
+        "builders-diy"
+      ],
+      "title": "Cutting mat with rotary cutter and ruler",
+      "description": "The mat has light cut marks and the ruler edge is straight. Close the cutter blade as soon as you set it down.",
+      "condition": "good",
+      "price_per_unit_agorot": 1000,
+      "deposit_agorot": 20000,
+      "min_units": 1,
+      "late_fee_agorot": 500,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l103",
+      "owner": "u13",
+      "category": "sewing-crafts",
+      "area": "beer-sheva",
+      "interests": [],
+      "title": "Embroidery hoop set in three sizes",
+      "description": "The wooden rings are smooth and the screws tighten by hand. Loosen the hoop when storing unfinished work.",
+      "condition": "good",
+      "price_per_unit_agorot": 400,
+      "deposit_agorot": 5000,
+      "min_units": 1,
+      "late_fee_agorot": 200,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l104",
+      "owner": "u14",
+      "category": "sewing-crafts",
+      "area": "beer-sheva",
+      "interests": [],
+      "title": "Knitting needle roll with stitch markers",
+      "description": "The pairs are labelled and the points are smooth. Keep the small markers in the zipped pocket.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 8000,
+      "min_units": 1,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l105",
+      "owner": "u15",
+      "category": "sewing-crafts",
+      "area": "beer-sheva",
+      "interests": [
+        "students",
+        "parents-kids"
+      ],
+      "title": "A4 paper craft punch set",
+      "description": "The handles press cleanly and the shapes are easy to align. Use ordinary card rather than thick packaging board.",
+      "condition": "fair",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 10000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "live"
+    },
+    {
+      "key": "l106",
+      "owner": "u16",
+      "category": "sewing-crafts",
+      "area": "beer-sheva",
+      "interests": [],
+      "title": "Adjustable dress form with waist stand",
+      "description": "The adjustment wheels turn well and the stand is stable. Make small changes on each side to keep the form balanced.",
+      "condition": "good",
+      "price_per_unit_agorot": 2500,
+      "deposit_agorot": 50000,
+      "min_units": 1,
+      "late_fee_agorot": 1000,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "live"
+    },
+    {
+      "key": "l107",
+      "owner": "u17",
+      "category": "sewing-crafts",
+      "area": "beer-sheva",
+      "interests": [],
+      "title": "Fabric steamer with hanging hook",
+      "description": "The tank is clean and the hose bends freely. Test heat-sensitive fabric in a hidden spot first.",
+      "condition": "good",
+      "price_per_unit_agorot": 1800,
+      "deposit_agorot": 30000,
+      "min_units": 1,
+      "late_fee_agorot": 900,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "live"
+    },
+    {
+      "key": "l108",
+      "owner": "u18",
+      "category": "sewing-crafts",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Clay modelling tool roll",
+      "description": "The tools have smooth handles and a useful range of tips. Wipe clay off before it dries into the fabric roll.",
+      "condition": "good",
+      "price_per_unit_agorot": 400,
+      "deposit_agorot": 6000,
+      "min_units": 1,
+      "late_fee_agorot": 200,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "live"
+    },
+    {
+      "key": "l109",
+      "owner": "u19",
+      "category": "sewing-crafts",
+      "area": "beer-sheva",
+      "interests": [],
+      "title": "Mini weaving loom with shuttle",
+      "description": "The frame is square and the shuttle is polished smooth. Keep the warp tension even across the pegs.",
+      "condition": "good",
+      "price_per_unit_agorot": 700,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 350,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "live"
+    },
+    {
+      "key": "l110",
+      "owner": "u20",
+      "category": "sewing-crafts",
+      "area": "beer-sheva",
+      "interests": [],
+      "title": "Bead sorting trays and small pliers",
+      "description": "The tray lids close firmly and the plier tips line up. Work over a cloth so dropped beads do not roll far.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 8000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "live"
+    },
+    {
+      "key": "l111",
+      "owner": "u21",
+      "category": "board-games",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Cooperative island board game for four",
+      "description": "All pieces are counted and the rule booklet is easy to follow. Sort the tokens into the small bags after play.",
+      "condition": "good",
+      "price_per_unit_agorot": 1000,
+      "deposit_agorot": 18000,
+      "min_units": 2,
+      "late_fee_agorot": 500,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "live"
+    },
+    {
+      "key": "l112",
+      "owner": "u22",
+      "category": "board-games",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Wooden chess set with folding board",
+      "description": "The hinges are sound and every piece has a felt base. Fold the board with the pieces in their slots.",
+      "condition": "good",
+      "price_per_unit_agorot": 700,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 350,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "live"
+    },
+    {
+      "key": "l113",
+      "owner": "u23",
+      "category": "board-games",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Large-piece nature jigsaw in sorting box",
+      "description": "The full puzzle is here and the box corners are reinforced. Use the tray lid to keep unfinished sections together.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 10000,
+      "min_units": 1,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Building lobby, early evenings by arrangement",
+      "status": "draft"
+    },
+    {
+      "key": "l114",
+      "owner": "u24",
+      "category": "board-games",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Family word game with timer",
+      "description": "The cards are clean and the sand timer runs freely. Agree on the house rules before starting the first round.",
+      "condition": "good",
+      "price_per_unit_agorot": 800,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 400,
+      "attributes": {},
+      "pickup_detail": "Outside the cafe entrance, after the lunch rush",
+      "status": "draft"
+    },
+    {
+      "key": "l115",
+      "owner": "u25",
+      "category": "board-games",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Tile-laying countryside game",
+      "description": "The tiles lie flat and the scoring track is clear. Count the small wooden markers before putting the lid on.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 18000,
+      "min_units": 3,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Campus gate, late afternoon by agreement",
+      "status": "draft"
+    },
+    {
+      "key": "l116",
+      "owner": "u26",
+      "category": "board-games",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Domino set with sturdy travel case",
+      "description": "The tiles are easy to read and the case latch works. Play on a cloth if you want a quieter table.",
+      "condition": "good",
+      "price_per_unit_agorot": 500,
+      "deposit_agorot": 8000,
+      "min_units": 1,
+      "late_fee_agorot": 250,
+      "attributes": {},
+      "pickup_detail": "Shared courtyard entrance, daylight hours",
+      "status": "draft"
+    },
+    {
+      "key": "l117",
+      "owner": "u27",
+      "category": "board-games",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Magnetic travel draughts set",
+      "description": "The magnets hold on a moving table and the board folds neatly. Keep the small pieces away from younger children.",
+      "condition": "good",
+      "price_per_unit_agorot": 400,
+      "deposit_agorot": 6000,
+      "min_units": 1,
+      "late_fee_agorot": 200,
+      "attributes": {},
+      "pickup_detail": "Community centre foyer, during opening hours",
+      "status": "hidden"
+    },
+    {
+      "key": "l118",
+      "owner": "u28",
+      "category": "board-games",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Junior animal matching cards",
+      "description": "The thick cards have gently rounded corners and bright pictures. Lay out fewer pairs for a shorter first game.",
+      "condition": "fair",
+      "price_per_unit_agorot": 300,
+      "deposit_agorot": 5000,
+      "min_units": 1,
+      "late_fee_agorot": 150,
+      "attributes": {},
+      "pickup_detail": "Covered building entrance, before dinner",
+      "status": "hidden"
+    },
+    {
+      "key": "l119",
+      "owner": "u29",
+      "category": "board-games",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Strategy card game with score pad",
+      "description": "The deck is complete and the sleeves are clean. Shuffle in small batches rather than bending the cards.",
+      "condition": "good",
+      "price_per_unit_agorot": 700,
+      "deposit_agorot": 12000,
+      "min_units": 1,
+      "late_fee_agorot": 350,
+      "attributes": {},
+      "pickup_detail": "Library lobby, at a time we agree",
+      "status": "hidden"
+    },
+    {
+      "key": "l120",
+      "owner": "u30",
+      "category": "board-games",
+      "area": "beer-sheva",
+      "interests": [
+        "parents-kids"
+      ],
+      "title": "Oversized wooden stacking tower",
+      "description": "The blocks are smooth and a few have faint pencil marks. Build on the floor with clear space around the tower.",
+      "condition": "good",
+      "price_per_unit_agorot": 0,
+      "deposit_agorot": 25000,
+      "min_units": 1,
+      "late_fee_agorot": 0,
+      "attributes": {},
+      "pickup_detail": "Park entrance beside the notice board, before sunset",
+      "status": "hidden"
+    }
+  ],
+  "bookings": [
+    {
+      "key": "b001",
+      "listing": "l001",
+      "kind": "loan",
+      "borrower": "u08",
+      "start_offset_days": 5,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -2,
+      "message": "Would this work for a weekend project?"
+    },
+    {
+      "key": "b002",
+      "listing": "l002",
+      "kind": "loan",
+      "borrower": "u09",
+      "start_offset_days": 6,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -5,
+      "message": "I can collect after work if that suits you."
+    },
+    {
+      "key": "b003",
+      "listing": "l003",
+      "kind": "loan",
+      "borrower": "u10",
+      "start_offset_days": 7,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -8,
+      "message": "Could I check the setup with you at pickup?"
+    },
+    {
+      "key": "b004",
+      "listing": "l004",
+      "kind": "loan",
+      "borrower": "u11",
+      "start_offset_days": 8,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -11,
+      "message": "Would this work for a weekend project?"
+    },
+    {
+      "key": "b005",
+      "listing": "l005",
+      "kind": "loan",
+      "borrower": "u12",
+      "start_offset_days": 9,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -14,
+      "message": "I can collect after work if that suits you."
+    },
+    {
+      "key": "b006",
+      "listing": "l006",
+      "kind": "loan",
+      "borrower": "u13",
+      "start_offset_days": 10,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -17,
+      "message": "Could I check the setup with you at pickup?"
+    },
+    {
+      "key": "b007",
+      "listing": "l007",
+      "kind": "loan",
+      "borrower": "u14",
+      "start_offset_days": 11,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -20,
+      "message": "Would this work for a weekend project?"
+    },
+    {
+      "key": "b008",
+      "listing": "l008",
+      "kind": "loan",
+      "borrower": "u15",
+      "start_offset_days": 12,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -23,
+      "message": "I can collect after work if that suits you."
+    },
+    {
+      "key": "b009",
+      "listing": "l009",
+      "kind": "loan",
+      "borrower": "u16",
+      "start_offset_days": 13,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -26,
+      "message": "Could I check the setup with you at pickup?"
+    },
+    {
+      "key": "b010",
+      "listing": "l010",
+      "kind": "loan",
+      "borrower": "u17",
+      "start_offset_days": 14,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -29,
+      "message": "Would this work for a weekend project?"
+    },
+    {
+      "key": "b011",
+      "listing": "l011",
+      "kind": "loan",
+      "borrower": "u18",
+      "start_offset_days": 15,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -32,
+      "message": "I can collect after work if that suits you."
+    },
+    {
+      "key": "b012",
+      "listing": "l012",
+      "kind": "loan",
+      "borrower": "u19",
+      "start_offset_days": 16,
+      "days": 3,
+      "status": "requested",
+      "requested_offset_hours": -35,
+      "message": "Could I check the setup with you at pickup?"
+    },
+    {
+      "key": "b013",
+      "listing": "l013",
+      "kind": "loan",
+      "borrower": "u20",
+      "start_offset_days": 3,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "Thanks for confirming; I will bring a bag for the accessories."
+    },
+    {
+      "key": "b014",
+      "listing": "l014",
+      "kind": "loan",
+      "borrower": "u21",
+      "start_offset_days": 4,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "The pickup time works well for me."
+    },
+    {
+      "key": "b015",
+      "listing": "l015",
+      "kind": "loan",
+      "borrower": "u22",
+      "start_offset_days": 5,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "Thanks for confirming; I will bring a bag for the accessories."
+    },
+    {
+      "key": "b016",
+      "listing": "l016",
+      "kind": "loan",
+      "borrower": "u23",
+      "start_offset_days": 6,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "The pickup time works well for me."
+    },
+    {
+      "key": "b017",
+      "listing": "l017",
+      "kind": "loan",
+      "borrower": "u24",
+      "start_offset_days": 7,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "Thanks for confirming; I will bring a bag for the accessories."
+    },
+    {
+      "key": "b018",
+      "listing": "l018",
+      "kind": "loan",
+      "borrower": "u25",
+      "start_offset_days": 8,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "The pickup time works well for me."
+    },
+    {
+      "key": "b019",
+      "listing": "l019",
+      "kind": "loan",
+      "borrower": "u26",
+      "start_offset_days": 9,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "Thanks for confirming; I will bring a bag for the accessories."
+    },
+    {
+      "key": "b020",
+      "listing": "l020",
+      "kind": "loan",
+      "borrower": "u27",
+      "start_offset_days": 10,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "The pickup time works well for me."
+    },
+    {
+      "key": "b021",
+      "listing": "l021",
+      "kind": "loan",
+      "borrower": "u28",
+      "start_offset_days": 11,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "Thanks for confirming; I will bring a bag for the accessories."
+    },
+    {
+      "key": "b022",
+      "listing": "l022",
+      "kind": "loan",
+      "borrower": "u29",
+      "start_offset_days": 12,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "The pickup time works well for me."
+    },
+    {
+      "key": "b023",
+      "listing": "l023",
+      "kind": "loan",
+      "borrower": "u30",
+      "start_offset_days": 13,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "Thanks for confirming; I will bring a bag for the accessories."
+    },
+    {
+      "key": "b024",
+      "listing": "l024",
+      "kind": "loan",
+      "borrower": "u31",
+      "start_offset_days": 14,
+      "days": 3,
+      "status": "approved",
+      "requested_offset_hours": -24,
+      "message": "The pickup time works well for me."
+    },
+    {
+      "key": "b025",
+      "listing": "l025",
+      "kind": "loan",
+      "borrower": "u32",
+      "start_offset_days": -1,
+      "days": 3,
+      "status": "active",
+      "requested_offset_hours": -72,
+      "message": "Collected everything, thank you for showing me how it works."
+    },
+    {
+      "key": "b026",
+      "listing": "l026",
+      "kind": "loan",
+      "borrower": "u33",
+      "start_offset_days": -1,
+      "days": 3,
+      "status": "active",
+      "requested_offset_hours": -72,
+      "message": "I have the case and all the small parts."
+    },
+    {
+      "key": "b027",
+      "listing": "l027",
+      "kind": "loan",
+      "borrower": "u34",
+      "start_offset_days": -1,
+      "days": 3,
+      "status": "active",
+      "requested_offset_hours": -72,
+      "message": "Collected everything, thank you for showing me how it works."
+    },
+    {
+      "key": "b028",
+      "listing": "l028",
+      "kind": "loan",
+      "borrower": "u35",
+      "start_offset_days": -1,
+      "days": 3,
+      "status": "active",
+      "requested_offset_hours": -72,
+      "message": "I have the case and all the small parts."
+    },
+    {
+      "key": "b029",
+      "listing": "l029",
+      "kind": "loan",
+      "borrower": "u36",
+      "start_offset_days": -1,
+      "days": 3,
+      "status": "active",
+      "requested_offset_hours": -72,
+      "message": "Collected everything, thank you for showing me how it works."
+    },
+    {
+      "key": "b030",
+      "listing": "l030",
+      "kind": "loan",
+      "borrower": "u37",
+      "start_offset_days": -1,
+      "days": 3,
+      "status": "active",
+      "requested_offset_hours": -72,
+      "message": "I have the case and all the small parts."
+    },
+    {
+      "key": "b031",
+      "listing": "l031",
+      "kind": "loan",
+      "borrower": "u08",
+      "start_offset_days": -1,
+      "days": 3,
+      "status": "active",
+      "requested_offset_hours": -72,
+      "message": "Collected everything, thank you for showing me how it works."
+    },
+    {
+      "key": "b032",
+      "listing": "l032",
+      "kind": "loan",
+      "borrower": "u09",
+      "start_offset_days": -1,
+      "days": 3,
+      "status": "active",
+      "requested_offset_hours": -72,
+      "message": "I have the case and all the small parts."
+    },
+    {
+      "key": "b033",
+      "listing": "l033",
+      "kind": "loan",
+      "borrower": "u10",
+      "start_offset_days": -15,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -432,
+      "message": "Everything is packed and ready for our agreed return."
+    },
+    {
+      "key": "b034",
+      "listing": "l034",
+      "kind": "loan",
+      "borrower": "u11",
+      "start_offset_days": -16,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -456,
+      "message": "Thanks again, the job went smoothly."
+    },
+    {
+      "key": "b035",
+      "listing": "l035",
+      "kind": "loan",
+      "borrower": "u12",
+      "start_offset_days": -17,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -480,
+      "message": "Everything is packed and ready for our agreed return."
+    },
+    {
+      "key": "b036",
+      "listing": "l036",
+      "kind": "loan",
+      "borrower": "u13",
+      "start_offset_days": -18,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -504,
+      "message": "Thanks again, the job went smoothly."
+    },
+    {
+      "key": "b037",
+      "listing": "l037",
+      "kind": "loan",
+      "borrower": "u14",
+      "start_offset_days": -19,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -528,
+      "message": "Everything is packed and ready for our agreed return."
+    },
+    {
+      "key": "b038",
+      "listing": "l038",
+      "kind": "loan",
+      "borrower": "u15",
+      "start_offset_days": -20,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -552,
+      "message": "Thanks again, the job went smoothly."
+    },
+    {
+      "key": "b039",
+      "listing": "l039",
+      "kind": "loan",
+      "borrower": "u16",
+      "start_offset_days": -21,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -576,
+      "message": "Everything is packed and ready for our agreed return."
+    },
+    {
+      "key": "b040",
+      "listing": "l040",
+      "kind": "loan",
+      "borrower": "u17",
+      "start_offset_days": -22,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -600,
+      "message": "Thanks again, the job went smoothly."
+    },
+    {
+      "key": "b041",
+      "listing": "l041",
+      "kind": "loan",
+      "borrower": "u18",
+      "start_offset_days": -23,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -624,
+      "message": "Everything is packed and ready for our agreed return."
+    },
+    {
+      "key": "b042",
+      "listing": "l042",
+      "kind": "loan",
+      "borrower": "u19",
+      "start_offset_days": -24,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -648,
+      "message": "Thanks again, the job went smoothly."
+    },
+    {
+      "key": "b043",
+      "listing": "l043",
+      "kind": "loan",
+      "borrower": "u20",
+      "start_offset_days": -25,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -672,
+      "message": "Everything is packed and ready for our agreed return."
+    },
+    {
+      "key": "b044",
+      "listing": "l044",
+      "kind": "loan",
+      "borrower": "u21",
+      "start_offset_days": -26,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -696,
+      "message": "Thanks again, the job went smoothly."
+    },
+    {
+      "key": "b045",
+      "listing": "l045",
+      "kind": "loan",
+      "borrower": "u22",
+      "start_offset_days": -27,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -720,
+      "message": "Everything is packed and ready for our agreed return."
+    },
+    {
+      "key": "b046",
+      "listing": "l046",
+      "kind": "loan",
+      "borrower": "u23",
+      "start_offset_days": -28,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -744,
+      "message": "Thanks again, the job went smoothly."
+    },
+    {
+      "key": "b047",
+      "listing": "l047",
+      "kind": "loan",
+      "borrower": "u24",
+      "start_offset_days": -29,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -768,
+      "message": "Everything is packed and ready for our agreed return."
+    },
+    {
+      "key": "b048",
+      "listing": "l048",
+      "kind": "loan",
+      "borrower": "u25",
+      "start_offset_days": -30,
+      "days": 3,
+      "status": "returned",
+      "requested_offset_hours": -792,
+      "message": "Thanks again, the job went smoothly."
+    },
+    {
+      "key": "b049",
+      "listing": "l049",
+      "kind": "loan",
+      "borrower": "u26",
+      "start_offset_days": 8,
+      "days": 3,
+      "status": "declined",
+      "requested_offset_hours": -30,
+      "message": "Could I borrow this for a small gathering?"
+    },
+    {
+      "key": "b050",
+      "listing": "l050",
+      "kind": "loan",
+      "borrower": "u27",
+      "start_offset_days": 9,
+      "days": 3,
+      "status": "declined",
+      "requested_offset_hours": -30,
+      "message": "I was hoping to use this for a study session."
+    },
+    {
+      "key": "b051",
+      "listing": "l051",
+      "kind": "loan",
+      "borrower": "u28",
+      "start_offset_days": 10,
+      "days": 3,
+      "status": "declined",
+      "requested_offset_hours": -30,
+      "message": "Could I borrow this for a small gathering?"
+    },
+    {
+      "key": "b052",
+      "listing": "l052",
+      "kind": "loan",
+      "borrower": "u29",
+      "start_offset_days": 11,
+      "days": 3,
+      "status": "declined",
+      "requested_offset_hours": -30,
+      "message": "I was hoping to use this for a study session."
+    },
+    {
+      "key": "b053",
+      "listing": "l053",
+      "kind": "loan",
+      "borrower": "u30",
+      "start_offset_days": 12,
+      "days": 3,
+      "status": "declined",
+      "requested_offset_hours": -30,
+      "message": "Could I borrow this for a small gathering?"
+    },
+    {
+      "key": "b054",
+      "listing": "l054",
+      "kind": "loan",
+      "borrower": "u31",
+      "start_offset_days": 13,
+      "days": 3,
+      "status": "declined",
+      "requested_offset_hours": -30,
+      "message": "I was hoping to use this for a study session."
+    },
+    {
+      "key": "b055",
+      "listing": "l055",
+      "kind": "loan",
+      "borrower": "u32",
+      "start_offset_days": 14,
+      "days": 3,
+      "status": "declined",
+      "requested_offset_hours": -30,
+      "message": "Could I borrow this for a small gathering?"
+    },
+    {
+      "key": "b056",
+      "listing": "l056",
+      "kind": "loan",
+      "borrower": "u33",
+      "start_offset_days": 15,
+      "days": 3,
+      "status": "declined",
+      "requested_offset_hours": -30,
+      "message": "I was hoping to use this for a study session."
+    },
+    {
+      "key": "b057",
+      "listing": "l057",
+      "kind": "loan",
+      "borrower": "u34",
+      "start_offset_days": 10,
+      "days": 3,
+      "status": "expired",
+      "requested_offset_hours": -48,
+      "message": "Let me know if the timing works for you."
+    },
+    {
+      "key": "b058",
+      "listing": "l058",
+      "kind": "loan",
+      "borrower": "u35",
+      "start_offset_days": 11,
+      "days": 3,
+      "status": "expired",
+      "requested_offset_hours": -56,
+      "message": "I can be flexible about pickup."
+    },
+    {
+      "key": "b059",
+      "listing": "l059",
+      "kind": "loan",
+      "borrower": "u36",
+      "start_offset_days": 12,
+      "days": 3,
+      "status": "expired",
+      "requested_offset_hours": -64,
+      "message": "Let me know if the timing works for you."
+    },
+    {
+      "key": "b060",
+      "listing": "l060",
+      "kind": "loan",
+      "borrower": "u37",
+      "start_offset_days": 13,
+      "days": 3,
+      "status": "expired",
+      "requested_offset_hours": -72,
+      "message": "I can be flexible about pickup."
+    },
+    {
+      "key": "b061",
+      "listing": "l061",
+      "kind": "loan",
+      "borrower": "u08",
+      "start_offset_days": 14,
+      "days": 3,
+      "status": "expired",
+      "requested_offset_hours": -80,
+      "message": "Let me know if the timing works for you."
+    },
+    {
+      "key": "b062",
+      "listing": "l062",
+      "kind": "loan",
+      "borrower": "u09",
+      "start_offset_days": 15,
+      "days": 3,
+      "status": "expired",
+      "requested_offset_hours": -88,
+      "message": "I can be flexible about pickup."
+    },
+    {
+      "key": "b063",
+      "listing": "l063",
+      "kind": "loan",
+      "borrower": "u10",
+      "start_offset_days": 7,
+      "days": 3,
+      "status": "cancelled",
+      "requested_offset_hours": -20,
+      "message": "My plans changed, so I no longer need the item."
+    },
+    {
+      "key": "b064",
+      "listing": "l064",
+      "kind": "loan",
+      "borrower": "u11",
+      "start_offset_days": 8,
+      "days": 3,
+      "status": "cancelled",
+      "requested_offset_hours": -20,
+      "message": "I found another solution before pickup."
+    },
+    {
+      "key": "b065",
+      "listing": "l065",
+      "kind": "loan",
+      "borrower": "u12",
+      "start_offset_days": 9,
+      "days": 3,
+      "status": "cancelled",
+      "requested_offset_hours": -20,
+      "message": "My plans changed, so I no longer need the item."
+    },
+    {
+      "key": "b066",
+      "listing": "l066",
+      "kind": "loan",
+      "borrower": "u13",
+      "start_offset_days": 10,
+      "days": 3,
+      "status": "cancelled",
+      "requested_offset_hours": -20,
+      "message": "I found another solution before pickup."
+    },
+    {
+      "key": "b067",
+      "listing": "l067",
+      "kind": "loan",
+      "borrower": "u14",
+      "start_offset_days": 11,
+      "days": 3,
+      "status": "cancelled",
+      "requested_offset_hours": -20,
+      "message": "My plans changed, so I no longer need the item."
+    },
+    {
+      "key": "b068",
+      "listing": "l068",
+      "kind": "loan",
+      "borrower": "u15",
+      "start_offset_days": 12,
+      "days": 3,
+      "status": "cancelled",
+      "requested_offset_hours": -20,
+      "message": "I found another solution before pickup."
+    },
+    {
+      "key": "b069",
+      "listing": "l013",
+      "kind": "block",
+      "start_offset_days": 30,
+      "days": 2,
+      "status": "approved"
+    },
+    {
+      "key": "b070",
+      "listing": "l014",
+      "kind": "block",
+      "start_offset_days": 33,
+      "days": 2,
+      "status": "approved"
+    },
+    {
+      "key": "b071",
+      "listing": "l025",
+      "kind": "block",
+      "start_offset_days": 36,
+      "days": 2,
+      "status": "approved"
+    },
+    {
+      "key": "b072",
+      "listing": "l026",
+      "kind": "block",
+      "start_offset_days": 39,
+      "days": 2,
+      "status": "cancelled"
+    }
+  ],
+  "reviews": [
+    {
+      "booking": "b033",
+      "author": "u10",
+      "subject": "u03",
+      "rating": 4,
+      "body": "Easy pickup and every accessory was in the case."
+    },
+    {
+      "booking": "b033",
+      "author": "u03",
+      "subject": "u10",
+      "rating": 5,
+      "body": "Returned dry and neatly packed."
+    },
+    {
+      "booking": "b034",
+      "author": "u11",
+      "subject": "u04",
+      "rating": 5,
+      "body": "The item matched the description and worked well."
+    },
+    {
+      "booking": "b035",
+      "author": "u12",
+      "subject": "u05",
+      "rating": 5,
+      "body": "Clear instructions made the first try straightforward."
+    },
+    {
+      "booking": "b035",
+      "author": "u05",
+      "subject": "u12",
+      "rating": 5,
+      "body": "All the small parts came back in their pockets."
+    },
+    {
+      "booking": "b036",
+      "author": "u13",
+      "subject": "u06",
+      "rating": 5,
+      "body": "Clean kit and a flexible return time."
+    },
+    {
+      "booking": "b037",
+      "author": "u14",
+      "subject": "u07",
+      "rating": 5,
+      "body": "Everything was counted together, which was reassuring."
+    },
+    {
+      "booking": "b037",
+      "author": "u07",
+      "subject": "u14",
+      "rating": 5,
+      "body": "Good communication and an on-time return."
+    },
+    {
+      "booking": "b038",
+      "author": "u15",
+      "subject": "u08",
+      "rating": 4,
+      "body": "Useful equipment for a small project at home."
+    },
+    {
+      "booking": "b039",
+      "author": "u16",
+      "subject": "u09",
+      "rating": 5,
+      "body": "The owner explained the one worn part before pickup."
+    },
+    {
+      "booking": "b039",
+      "author": "u09",
+      "subject": "u16",
+      "rating": 5,
+      "body": "The item came back clean and ready to lend again."
+    },
+    {
+      "booking": "b040",
+      "author": "u17",
+      "subject": "u10",
+      "rating": 5,
+      "body": "Packed neatly and ready at the agreed time."
+    },
+    {
+      "booking": "b041",
+      "author": "u18",
+      "subject": "u11",
+      "rating": 5,
+      "body": "The practical tip saved me a second attempt."
+    },
+    {
+      "booking": "b041",
+      "author": "u11",
+      "subject": "u18",
+      "rating": 5,
+      "body": "Careful handling and a friendly handover."
+    },
+    {
+      "booking": "b042",
+      "author": "u19",
+      "subject": "u12",
+      "rating": 5,
+      "body": "A tidy set with all the pieces present."
+    },
+    {
+      "booking": "b043",
+      "author": "u20",
+      "subject": "u13",
+      "rating": 4,
+      "body": "Quick handover and no surprises during use."
+    },
+    {
+      "booking": "b043",
+      "author": "u13",
+      "subject": "u20",
+      "rating": 5,
+      "body": "Let me know the return time well in advance."
+    },
+    {
+      "booking": "b044",
+      "author": "u21",
+      "subject": "u14",
+      "rating": 5,
+      "body": "Worked exactly as I needed for the afternoon."
+    },
+    {
+      "booking": "b045",
+      "author": "u22",
+      "subject": "u15",
+      "rating": 5,
+      "body": "Good condition and a helpful demonstration."
+    },
+    {
+      "booking": "b045",
+      "author": "u15",
+      "subject": "u22",
+      "rating": 5,
+      "body": "Everything was checked together at return."
+    },
+    {
+      "booking": "b046",
+      "author": "u23",
+      "subject": "u16",
+      "rating": 5,
+      "body": "The carrying case made the trip home easy."
+    },
+    {
+      "booking": "b047",
+      "author": "u24",
+      "subject": "u17",
+      "rating": 5,
+      "body": "Fair description and a smooth return."
+    },
+    {
+      "booking": "b047",
+      "author": "u17",
+      "subject": "u24",
+      "rating": 5,
+      "body": "The kit was put away just as we discussed."
+    },
+    {
+      "booking": "b048",
+      "author": "u25",
+      "subject": "u18",
+      "rating": 4,
+      "body": "The accessories were labelled and simple to sort."
+    }
+  ],
+  "looking_for": [
+    {
+      "author": "u12",
+      "area": "tel-aviv-yafo",
+      "interest": null,
+      "category": null,
+      "title": "Two-person tent for a short hike",
+      "body": "A friend and I are trying a nearby campsite. A simple tent with a groundsheet would be ideal.",
+      "wanted_start_offset_days": null,
+      "wanted_days": null,
+      "status": "open"
+    },
+    {
+      "author": "u13",
+      "area": "haifa",
+      "interest": "musicians",
+      "category": "musical-instruments",
+      "title": "Keyboard for a rehearsal afternoon",
+      "body": "Our usual practice room is closed this week. A portable keyboard with its power supply would help.",
+      "wanted_start_offset_days": 11,
+      "wanted_days": 3,
+      "status": "open"
+    },
+    {
+      "author": "u14",
+      "area": "beer-sheva",
+      "interest": "builders-diy",
+      "category": "power-tools",
+      "title": "Drill for a pair of wall shelves",
+      "body": "I have the fixings and would appreciate a drill with masonry bits. Happy to collect in the evening.",
+      "wanted_start_offset_days": 12,
+      "wanted_days": 4,
+      "status": "open"
+    },
+    {
+      "author": "u15",
+      "area": "tel-aviv-yafo",
+      "interest": "parents-kids",
+      "category": "event-supplies",
+      "title": "Projector for a family film night",
+      "body": "We have a blank wall and a quiet room ready. A cable for a laptop would be useful too.",
+      "wanted_start_offset_days": 13,
+      "wanted_days": 2,
+      "status": "open"
+    },
+    {
+      "author": "u16",
+      "area": "haifa",
+      "interest": "builders-diy",
+      "category": "sewing-crafts",
+      "title": "Sewing machine for curtain hems",
+      "body": "I only need a straight stitch for two curtains. A quick reminder about threading would be welcome.",
+      "wanted_start_offset_days": null,
+      "wanted_days": null,
+      "status": "open"
+    },
+    {
+      "author": "u17",
+      "area": "beer-sheva",
+      "interest": "office-study",
+      "category": null,
+      "title": "Folding table for a study group",
+      "body": "Four of us need a little more desk space. It needs to fit through a normal doorway.",
+      "wanted_start_offset_days": 15,
+      "wanted_days": 4,
+      "status": "open"
+    },
+    {
+      "author": "u18",
+      "area": "tel-aviv-yafo",
+      "interest": "parents-kids",
+      "category": "kitchen-appliances",
+      "title": "Large pot for a shared dinner",
+      "body": "We are making soup for a small group. A lid and easy-to-carry handles would be helpful.",
+      "wanted_start_offset_days": 16,
+      "wanted_days": 2,
+      "status": "open"
+    },
+    {
+      "author": "u19",
+      "area": "haifa",
+      "interest": null,
+      "category": "camping-gear",
+      "title": "Sleeping mats for visiting friends",
+      "body": "Two friends are staying over and floor space is available. Foam mats are completely fine.",
+      "wanted_start_offset_days": 17,
+      "wanted_days": 3,
+      "status": "open"
+    },
+    {
+      "author": "u20",
+      "area": "beer-sheva",
+      "interest": "students",
+      "category": "photography",
+      "title": "Tripod for recording a presentation",
+      "body": "I need a stable phone mount for a short course assignment. It will stay indoors.",
+      "wanted_start_offset_days": null,
+      "wanted_days": null,
+      "status": "open"
+    },
+    {
+      "author": "u21",
+      "area": "tel-aviv-yafo",
+      "interest": "parents-kids",
+      "category": "board-games",
+      "title": "Board game for a mixed-age evening",
+      "body": "Something cooperative with a short explanation would suit us. We will count the pieces carefully.",
+      "wanted_start_offset_days": 19,
+      "wanted_days": 2,
+      "status": "open"
+    },
+    {
+      "author": "u22",
+      "area": "haifa",
+      "interest": "parents-kids",
+      "category": null,
+      "title": "Upholstery cleaner for a fabric chair",
+      "body": "The chair needs a freshen-up after storage. I would like to test a small hidden patch first.",
+      "wanted_start_offset_days": 20,
+      "wanted_days": 3,
+      "status": "open"
+    },
+    {
+      "author": "u23",
+      "area": "beer-sheva",
+      "interest": "musicians",
+      "category": "musical-instruments",
+      "title": "Music stands for a small ensemble",
+      "body": "We have the instruments but are short of two stands. Folding ones would be easiest to carry.",
+      "wanted_start_offset_days": 21,
+      "wanted_days": 4,
+      "status": "open"
+    },
+    {
+      "author": "u24",
+      "area": "tel-aviv-yafo",
+      "interest": "builders-diy",
+      "category": "garden-tools",
+      "title": "Garden loppers for balcony branches",
+      "body": "A few thin branches need trimming before repotting. I do not need powered equipment.",
+      "wanted_start_offset_days": null,
+      "wanted_days": null,
+      "status": "open"
+    },
+    {
+      "author": "u25",
+      "area": "haifa",
+      "interest": "office-study",
+      "category": "photography",
+      "title": "Reflector for an outdoor portrait exercise",
+      "body": "I am practising with a classmate in daylight. A collapsible reflector would be plenty.",
+      "wanted_start_offset_days": 23,
+      "wanted_days": 3,
+      "status": "open"
+    },
+    {
+      "author": "u26",
+      "area": "beer-sheva",
+      "interest": null,
+      "category": "office-study",
+      "title": "Whiteboard for exam revision",
+      "body": "We want to work through problems without using lots of paper. A portable board would fit our room.",
+      "wanted_start_offset_days": 24,
+      "wanted_days": 4,
+      "status": "open"
+    },
+    {
+      "author": "u27",
+      "area": "tel-aviv-yafo",
+      "interest": "parents-kids",
+      "category": null,
+      "title": "Reusable cups for a courtyard meetup",
+      "body": "We would rather wash a set than buy disposable cups. Around twenty should cover the group.",
+      "wanted_start_offset_days": 25,
+      "wanted_days": 2,
+      "status": "open"
+    },
+    {
+      "author": "u28",
+      "area": "haifa",
+      "interest": "outdoor-camping",
+      "category": "sports-equipment",
+      "title": "Yoga mats for a beginner session",
+      "body": "Two clean mats would make it easier to practise together. We can bring carrying straps.",
+      "wanted_start_offset_days": null,
+      "wanted_days": null,
+      "status": "open"
+    },
+    {
+      "author": "u29",
+      "area": "beer-sheva",
+      "interest": "parents-kids",
+      "category": "kitchen-appliances",
+      "title": "Mixer for a birthday cake",
+      "body": "I have the ingredients and just need help with the mixing. A whisk attachment would be useful.",
+      "wanted_start_offset_days": 27,
+      "wanted_days": 4,
+      "status": "open"
+    },
+    {
+      "author": "u30",
+      "area": "tel-aviv-yafo",
+      "interest": "students",
+      "category": "sewing-crafts",
+      "title": "Craft cutting mat for a model project",
+      "body": "Our project involves thin card and a ruler. A used mat is fine as long as it lies flat.",
+      "wanted_start_offset_days": 28,
+      "wanted_days": 2,
+      "status": "open"
+    },
+    {
+      "author": "u31",
+      "area": "haifa",
+      "interest": "outdoor-camping",
+      "category": "camping-gear",
+      "title": "Cooler for a picnic afternoon",
+      "body": "A small group is meeting in the park. A cooler that takes two ice packs would be enough.",
+      "wanted_start_offset_days": 29,
+      "wanted_days": 3,
+      "status": "open"
+    },
+    {
+      "author": "u32",
+      "area": "beer-sheva",
+      "interest": "students",
+      "category": null,
+      "title": "Desk lamp for a temporary workspace",
+      "body": "My usual desk is being moved. An adjustable lamp would help for a few evenings.",
+      "wanted_start_offset_days": null,
+      "wanted_days": null,
+      "status": "closed"
+    },
+    {
+      "author": "u33",
+      "area": "tel-aviv-yafo",
+      "interest": null,
+      "category": "board-games",
+      "title": "Matching cards for a rainy afternoon",
+      "body": "A visiting child enjoys simple picture games. Large cards with easy-to-hold edges would work well.",
+      "wanted_start_offset_days": 31,
+      "wanted_days": 2,
+      "status": "closed"
+    }
+  ]
+}

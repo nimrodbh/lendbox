@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ t("review.title") }}{% endblock %}
+{% block content %}
+<div class="narrow card pad stack">
+  <h1>{{ t("review.title") }}</h1>
+  <p class="muted">{{ b.title }} · {{ b.range|range }} · {{ b.owner_name if b.role == "borrower" else b.borrower_name }}</p>
+  <form method="post" action="/bookings/{{ b.id }}/review" class="stack">
+    <input type="hidden" name="csrf_token" value="{{ csrf }}">
+    <fieldset class="field"><legend>{{ t("review.rating") }}</legend>
+      <div class="stars">
+        {% for n in range(1, 6) %}
+          <label class="star"><input type="radio" name="rating" value="{{ n }}" required {% if n == 5 %}checked{% endif %}
+            aria-label="{{ t('review.stars', n=n) }}"> {{ n }}</label>
+        {% endfor %}
+      </div>
+    </fieldset>
+    <div class="field"><label for="body">{{ t("review.body") }}</label><textarea class="input" id="body" name="body" maxlength="1000"></textarea></div>
+    <p class="small muted">{{ t("review.blind") }}</p>
+    <button class="btn btn-primary btn-block" type="submit">{{ t("review.submit") }}</button>
+  </form>
+</div>
+{% endblock %}

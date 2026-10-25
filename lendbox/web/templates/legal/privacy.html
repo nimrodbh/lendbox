@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Privacy notice | Lendbox{% endblock %}
+{% block content %}
+<div class="narrow stack">
+  <h1>Privacy notice</h1>
+  <p class="notice info">Your listings and display name are public. Booking messages are private to the two people involved, and the exact pickup spot is shared only with the owner and an approved borrower. We store no payment data and send no marketing email.</p>
+
+  <h2 id="what-we-store">What we store</h2>
+  <p>When you use Lendbox, we store:</p>
+  <ul>
+    <li>Your email address, display name and password as a scrypt hash, not as readable text.</li>
+    <li>The communities you join and the listings you create, including their photos and descriptions.</li>
+    <li>Your bookings and the messages between the two sides of each booking.</li>
+    <li>Reviews, reports and Looking for posts.</li>
+    <li>Failed login attempts, kept for 15 minutes, and session records used to keep you signed in.</li>
+  </ul>
+  <p>We do not store payment data. We store no location beyond the area you choose and the pickup text the owner writes. Do not add extra private details to public text or photos.</p>
+
+  <h2 id="who-sees-what">Who sees what</h2>
+  <p>Listings, display names, areas, visible reviews and Looking for posts are public. Choose what you publish with that in mind.</p>
+  <p>Messages are visible only to the two sides of a booking. The exact pickup spot is visible only to the owner and an approved borrower. Before approval, only the neighborhood is public. Keep the exact spot in the pickup field rather than a public description.</p>
+  <p>After a return, reviews become visible when both people submit one, or after 14 days. Admins can see reports and hide listings or users. Do not assume a report is a private message to the other person.</p>
+
+  <h2 id="why">Why we use this data</h2>
+  <p>We use account and session data so you can sign in and use your account. We use listings, communities and Looking for posts to help neighbors find each other. Bookings and messages help the two sides arrange the loan. Reviews share their experience; reports help admins handle problems. Failed login records help limit repeated login attempts.</p>
+  <p>We send account confirmation emails. Booking notification emails are planned for later. We do not send marketing email.</p>
+
+  <h2 id="how-long">How long we keep it</h2>
+  <p>Failed login attempt records are kept for 15 minutes. We have not yet set a fixed retention timetable for the other records listed above. Do not assume that stopping use of Lendbox removes those records or your public posts.</p>
+  <p>If you want to know what remains or ask for removal, write to {{ contact_email }}. We will explain what can be done and any limits that apply. This notice does not promise automatic deletion or a deletion deadline.</p>
+
+  <h2 id="your-rights">Your questions and requests</h2>
+  <p>You can contact {{ contact_email }} to ask about the personal data we hold, request access or correction, or ask for deletion. We may need to check that the request is yours before acting. We will explain any limits that apply rather than promise that every record can be removed.</p>
+  <p>We run the service from Israel. Israeli law, including the Privacy Protection Law, 1981, applies. This notice does not replace any rights you have under that law.</p>
+
+  <h2 id="security">Keeping your account safe</h2>
+  <p>We store only a scrypt hash of your password. A hash lets the service check a password without keeping its readable text. It does not make an account impossible to attack.</p>
+  <p>Use a password you do not use elsewhere. Keep it private and sign out on shared devices. No online service can promise complete security. If you suspect someone has used your account, contact us without sending your password.</p>
+
+  <h2 id="contact">Contact us</h2>
+  <p>For privacy questions or requests, write to {{ contact_email }}. Tell us which account or content your question concerns. Please do not send someone else's private information unless it is needed to explain the request.</p>
+  <p class="small muted">Last updated {{ updated }}</p>
+</div>
+{% endblock %}

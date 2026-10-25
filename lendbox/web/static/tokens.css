@@ -1,0 +1,64 @@
+/* Lendbox design tokens. The Jinja templates import this file; the prototype uses the same one.
+   Layout uses logical properties (inline/block) everywhere so dir="rtl" works without a second stylesheet. */
+
+:root {
+  /* color: light */
+  --bg: #faf8f3;            /* warm paper */
+  --surface: #ffffff;
+  --surface-2: #f2efe7;
+  --text: #1d2420;
+  --text-muted: #59645e;
+  --border: #e2ddd1;
+  --primary: #1f6b4f;       /* neighborhood green */
+  --primary-hover: #185a42;
+  --on-primary: #ffffff;
+  --primary-soft: #e3f0ea;
+  --accent: #945708;        /* amber, used for prices and highlights */
+  --accent-soft: #fbefdc;
+  --danger: #b42318;
+  --danger-soft: #fdecea;
+  --success: #1f7a3d;
+  --success-soft: #e5f4ea;
+  --booked: #e9e5dc;        /* calendar: unavailable day */
+  --focus: #2f7de1;
+  --shadow: 0 1px 2px rgb(29 36 32 / 6%), 0 4px 16px rgb(29 36 32 / 6%);
+
+  /* type */
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Hebrew", sans-serif;
+  --fs-xs: 0.75rem;   /* 12 */
+  --fs-sm: 0.875rem;  /* 14 */
+  --fs-md: 1rem;      /* 16 */
+  --fs-lg: 1.25rem;   /* 20 */
+  --fs-xl: 1.625rem;  /* 26 */
+  --fs-2xl: 2.125rem; /* 34 */
+  --lh-tight: 1.25;
+  --lh-body: 1.55;
+
+  /* spacing (4px steps) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px;
+
+  /* shape */
+  --r-sm: 8px; --r-md: 12px; --r-lg: 18px; --r-pill: 999px;
+  --tap: 44px;             /* minimum tap target */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121614; --surface: #1b211e; --surface-2: #232a26;
+    --text: #ebefea; --text-muted: #a3aea8; --border: #2f3833;
+    --primary: #5cc497; --primary-hover: #74d0a8; --on-primary: #0d1a14; --primary-soft: #1d3329;
+    --accent: #f0b45a; --accent-soft: #3a2c16;
+    --danger: #f8806f; --danger-soft: #3b1f1b; --success: #6ccf8b; --success-soft: #1b3324;
+    --booked: #2a302c; --focus: #7ab0f5;
+    --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 4px 16px rgb(0 0 0 / 30%);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121614; --surface: #1b211e; --surface-2: #232a26;
+  --text: #ebefea; --text-muted: #a3aea8; --border: #2f3833;
+  --primary: #5cc497; --primary-hover: #74d0a8; --on-primary: #0d1a14; --primary-soft: #1d3329;
+  --accent: #f0b45a; --accent-soft: #3a2c16;
+  --danger: #f8806f; --danger-soft: #3b1f1b; --success: #6ccf8b; --success-soft: #1b3324;
+  --booked: #2a302c; --focus: #7ab0f5;
+  --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 4px 16px rgb(0 0 0 / 30%);
+}

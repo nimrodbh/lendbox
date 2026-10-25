@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{{ t("manage.title") }}{% endblock %}
+{% block content %}
+<div class="narrow stack">
+  <p class="crumbs"><a href="/lending?tab=items">{{ t("lending.tab.items") }}</a></p>
+  {% if error %}<p class="notice warn" role="alert">{{ error }}</p>{% endif %}
+  <article class="card pad stack">
+    <div class="row between"><h1>{{ listing.title }}</h1><span class="badge">{{ t("status." ~ listing.status) }}</span></div>
+    <p class="muted">{{ listing.category_name }} · {{ listing.area_name }} ·
+      {% if listing.price_per_unit_agorot == 0 %}{{ t("price.free") }}{% else %}{{ t("price.per_day", amount=listing.price_per_unit_agorot|ils) }}{% endif %}
+      · {{ t("item.deposit") }} {{ listing.deposit_agorot|ils }}</p>
+    {% if listing.description %}<p>{{ listing.description }}</p>{% endif %}
+    {% if listing.status == "draft" %}
+      <form method="post" action="/listings/{{ listing.id }}/publish"><input type="hidden" name="csrf_token" value="{{ csrf }}">
+        <button class="btn btn-primary btn-block" type="submit">{{ t("manage.publish") }}</button></form>
+      <p class="small muted">{{ t("manage.publish.note") }}</p>
+    {% elif listing.status == "live" %}
+      <a class="btn btn-ghost" href="/items/{{ listing.id }}">{{ t("manage.view") }}</a>
+    {% endif %}
+  </article>
+  <section class="card pad stack">
+    <h2>{{ t("manage.blocks") }}</h2>
+    {% for bl in blocks %}
+      <div class="row between"><span>{{ bl.range|range }}</span>
+        <form method="post" action="/blocks/{{ bl.id }}/remove"><input type="hidden" name="csrf_token" value="{{ csrf }}">
+          <input type="hidden" name="back" value="/listings/{{ listing.id }}/manage">
+          <button class="btn btn-ghost" type="submit">{{ t("manage.block.remove") }}</button></form></div>
+    {% else %}<p class="small muted">{{ t("manage.blocks.none") }}</p>{% endfor %}
+    <form method="post" action="/listings/{{ listing.id }}/blocks" class="stack">
+      <input type="hidden" name="csrf_token" value="{{ csrf }}">
+      <div class="two">
+        <div class="field"><label for="start">{{ t("browse.start") }}</label><input class="input" id="start" name="start" type="date" required></div>
+        <div class="field"><label for="last_day">{{ t("browse.last_day") }}</label><input class="input" id="last_day" name="last_day" type="date" required></div>
+      </div>
+      <button class="btn btn-ghost" type="submit">{{ t("manage.block.add") }}</button>
+    </form>
+  </section>
+</div>
+{% endblock %}

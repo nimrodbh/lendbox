@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ t("login.title") }}{% endblock %}
+{% block content %}
+<div class="narrow card pad stack">
+  <h1>{{ t("login.title") }}</h1>
+  {% if error %}<p class="notice warn" role="alert">{{ t(error) }}</p>{% endif %}
+  <form method="post" action="/login" class="stack">
+    <input type="hidden" name="csrf_token" value="{{ csrf }}">
+    <input type="hidden" name="next" value="{{ next }}">
+    <div class="field"><label for="email">{{ t("signup.email") }}</label>
+      <input class="input" id="email" name="email" type="email" required value="{{ values.get('email', '') }}"></div>
+    <div class="field"><label for="password">{{ t("signup.password") }}</label>
+      <input class="input" id="password" name="password" type="password" required></div>
+    <button class="btn btn-primary btn-block" type="submit">{{ t("login.submit") }}</button>
+  </form>
+</div>
+{% endblock %}

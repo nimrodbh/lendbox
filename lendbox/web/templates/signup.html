@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ t("signup.title") }}{% endblock %}
+{% block content %}
+<div class="narrow card pad stack">
+  <h1>{{ t("signup.title") }}</h1>
+  <form method="post" action="/signup" class="stack" novalidate>
+    <input type="hidden" name="csrf_token" value="{{ csrf }}">
+    {% for name, label, kind, hint in [("email", "signup.email", "email", None),
+                                       ("display_name", "signup.name", "text", "signup.name.hint"),
+                                       ("password", "signup.password", "password", "signup.password.hint")] %}
+      {% set bad = error and error.field == name %}
+      <div class="field">
+        <label for="{{ name }}">{{ t(label) }}</label>
+        <input class="input" id="{{ name }}" name="{{ name }}" type="{{ kind }}" required
+               value="{{ values.get(name, '') if kind != 'password' else '' }}"
+               {% if bad %}aria-invalid="true" aria-describedby="{{ name }}-err" autofocus{% endif %}>
+        {% if hint %}<p class="hint small muted">{{ t(hint) }}</p>{% endif %}
+        {% if bad %}<p class="err" id="{{ name }}-err" role="alert">{{ t(error.key) }}</p>{% endif %}
+      </div>
+    {% endfor %}
+    <p class="small muted">{{ t("signup.agree") }} <a href="/terms">{{ t("footer.terms") }}</a> · <a href="/guidelines">{{ t("footer.guidelines") }}</a></p>
+    <button class="btn btn-primary btn-block" type="submit">{{ t("signup.submit") }}</button>
+  </form>
+</div>
+{% endblock %}

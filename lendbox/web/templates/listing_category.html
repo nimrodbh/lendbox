@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ t("listing.new.title") }}{% endblock %}
+{% block content %}
+<div class="narrow card pad stack">
+  <h1>{{ t("listing.new.title") }}</h1>
+  <form method="get" action="/listings/new" class="stack">
+    <div class="field"><label for="category">{{ t("listing.new.category") }}</label>
+      <select class="input" id="category" name="category" required>
+        {% for c in categories %}<option value="{{ c.id }}">{{ c.name }}</option>{% endfor %}
+      </select>
+      <p class="hint small muted">{{ t("listing.prohibited") }}</p></div>
+    <button class="btn btn-primary btn-block" type="submit">{{ t("listing.new.category.next") }}</button>
+  </form>
+</div>
+{% endblock %}

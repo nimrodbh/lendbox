@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ t("app.name") }}{% endblock %}</title>
+  <link rel="stylesheet" href="/static/tokens.css">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="logo" href="/"><span class="logo-mark" aria-hidden="true">L</span>{{ t("app.name") }}</a>
+      <span class="spacer"></span>
+      <a class="btn btn-ghost nav-browse" href="/browse">{{ t("nav.browse") }}</a>
+      {% if user %}
+        <a class="btn btn-primary nav-wide" href="/listings/new">{{ t("nav.list") }}</a>
+        <a class="btn btn-ghost nav-wide" href="/borrowing">{{ t("nav.borrowing") }}</a>
+        <a class="btn btn-ghost" href="/lending">{{ t("nav.lending") }}</a>
+        {% if user.is_admin %}<a class="btn btn-ghost nav-wide" href="/admin/reports">{{ t("nav.admin") }}</a>{% endif %}
+        <form method="post" action="/logout">
+          <input type="hidden" name="csrf_token" value="{{ csrf }}">
+          <button class="btn btn-ghost" type="submit">{{ t("nav.logout") }}</button>
+        </form>
+        <span class="avatar" title="{{ user.display_name }}">{{ user.display_name[:1] }}</span>
+      {% else %}
+        <a class="btn btn-ghost" href="/login">{{ t("nav.login") }}</a>
+        {% if demo %}<a class="btn btn-primary" href="/#demo">{{ t("demo.try") }}</a>
+        {% else %}<a class="btn btn-primary" href="/signup">{{ t("nav.signup") }}</a>{% endif %}
+      {% endif %}
+    </div>
+  </header>
+  {% if demo %}<p class="demo-bar" role="note">{{ t("demo.banner") }}</p>{% endif %}
+  <main>
+    {% if flash %}<div class="notice ok" role="status">{{ flash }}</div>{% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="foot"><div class="foot-inner"><p class="small muted">{{ t("footer.note") }}</p>
+    <p class="small"><a href="/terms">{{ t("footer.terms") }}</a> · <a href="/privacy">{{ t("footer.privacy") }}</a> · <a href="/guidelines">{{ t("footer.guidelines") }}</a></p></div></footer>
+</body>
+</html>

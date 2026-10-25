@@ -1,0 +1,28 @@
+# Render blueprint: one free web service built from the Dockerfile. The database is Neon's free Postgres;
+# paste its connection string (with ?sslmode=require) as LENDBOX_DATABASE_URL when Render asks.
+services:
+  - type: web
+    name: lendbox
+    runtime: docker
+    plan: free
+    region: frankfurt  # same region as the Neon database (AWS eu-central-1), and the closest to Israel
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: LENDBOX_DATABASE_URL
+        sync: false
+      - key: LENDBOX_ENV
+        value: production
+      - key: LENDBOX_SECURE_COOKIES
+        value: "1"
+      - key: LENDBOX_DEMO
+        value: "1"
+      - key: LENDBOX_HASH_SALT
+        generateValue: true
+      - key: LENDBOX_BASE_URL
+        sync: false
+      - key: LENDBOX_CONTACT_EMAIL
+        sync: false
+      # Render's proxy is the only way in to the container, so its forwarded client address can be trusted.
+      - key: FORWARDED_ALLOW_IPS
+        value: "*"

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% from "_report.html" import report_form %}
+{% block title %}{{ b.title }}{% endblock %}
+{% block content %}
+<div class="narrow stack">
+  <p class="crumbs"><a href="{{ '/lending' if b.role == 'owner' else '/borrowing' }}">{{ t("nav.lending") if b.role == "owner" else t("nav.borrowing") }}</a></p>
+  {% if error %}<p class="notice warn" role="alert">{{ error }}</p>{% endif %}
+  <article class="card pad stack">
+    <div class="row between"><h1>{{ b.title }}</h1><span class="badge">{{ t("status." ~ b.status) }}</span></div>
+    <p>{{ t("booking.with_owner", name=b.owner_name) if b.role == "borrower" else t("booking.with_borrower", name=b.borrower_name) }} · {{ b.range|range }}</p>
+    <p class="small muted">{{ t("lending.total", rental=b.rental_agorot|ils, deposit=b.deposit_agorot|ils) }}</p>
+    {% if b.pickup_detail %}<p class="notice ok">{{ t("booking.pickup", spot=b.pickup_detail) }}</p>
+    {% elif b.status == "requested" %}<p class="notice info">{{ t("booking.pickup.locked") }}</p>{% endif %}
+    <div class="row wrap">
+      {% set back = "/bookings/" ~ b.id %}
+      {% if b.role == "owner" and b.status == "approved" and today >= b.start %}
+        <form method="post" action="/bookings/{{ b.id }}/pickup"><input type="hidden" name="csrf_token" value="{{ csrf }}"><input type="hidden" name="back" value="{{ back }}">
+          <button class="btn btn-primary" type="submit">{{ t("booking.pickup.mark") }}</button></form>
+      {% endif %}
+      {% if b.role == "owner" and b.status == "active" %}
+        <form method="post" action="/bookings/{{ b.id }}/return"><input type="hidden" name="csrf_token" value="{{ csrf }}"><input type="hidden" name="back" value="{{ back }}">
+          <button class="btn btn-primary" type="submit">{{ t("booking.return.mark") }}</button></form>
+      {% endif %}
+      {% if b.status == "approved" and today < b.start or (b.status == "requested" and b.role == "borrower") %}
+        <form method="post" action="/bookings/{{ b.id }}/cancel"><input type="hidden" name="csrf_token" value="{{ csrf }}"><input type="hidden" name="back" value="{{ back }}">
+          <button class="btn btn-danger" type="submit">{{ t("booking.cancel") }}</button></form>
+      {% endif %}
+      {% if b.status == "returned" and not b.my_review %}<a class="btn btn-primary" href="/bookings/{{ b.id }}/review">{{ t("borrowing.review") }}</a>{% endif %}
+    </div>
+  </article>
+  <section id="messages" class="card pad stack">
+    <h2>{{ t("booking.thread") }}</h2>
+    {% if b.message %}<p class="small"><b>{{ b.borrower_name }}</b>: {{ b.message }}</p>{% endif %}
+    {% for m in b.messages %}<p class="small"><b>{{ m.sender_name }}</b>: {{ m.body }}</p>{% endfor %}
+    <form method="post" action="/bookings/{{ b.id }}/messages" class="stack">
+      <input type="hidden" name="csrf_token" value="{{ csrf }}">
+      <label class="small" for="body">{{ t("booking.message.placeholder") }}</label>
+      <textarea class="input" id="body" name="body" maxlength="2000" required></textarea>
+      <button class="btn btn-ghost" type="submit">{{ t("booking.send") }}</button>
+    </form>
+    {{ report_form("user", b.owner_id if b.role == "borrower" else b.borrower_id, "report.user", "/bookings/" ~ b.id) }}
+  </section>
+</div>
+{% endblock %}

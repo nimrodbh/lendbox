@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ t("borrowing.title") }}{% endblock %}
+{% block content %}
+<h1>{{ t("borrowing.title") }}</h1>
+{% if error %}<p class="notice warn" role="alert">{{ error }}</p>{% endif %}
+<div class="stack">
+{% for b in bookings %}
+  <article class="card pad req">
+    <div class="row between"><a href="/bookings/{{ b.id }}"><b>{{ b.title }}</b></a><span class="badge">{{ t("status." ~ b.status) }}</span></div>
+    <p>{{ t("booking.with_owner", name=b.owner_name) }} · {{ b.range|range }}</p>
+    <p class="small muted">{{ t("lending.total", rental=b.rental_agorot|ils, deposit=b.deposit_agorot|ils) }}</p>
+    <div class="row wrap">
+      <a class="btn btn-ghost" href="/bookings/{{ b.id }}">{{ t("booking.open") }}</a>
+      {% if b.status in ("requested", "approved") %}
+        <form method="post" action="/bookings/{{ b.id }}/cancel"><input type="hidden" name="csrf_token" value="{{ csrf }}">
+          <input type="hidden" name="back" value="/borrowing">
+          <button class="btn btn-danger" type="submit">{{ t("borrowing.cancel") }}</button></form>
+      {% endif %}
+      {% if b.review_due %}<a class="btn btn-primary" href="/bookings/{{ b.id }}/review">{{ t("borrowing.review") }}</a>{% endif %}
+    </div>
+  </article>
+{% else %}
+  <div class="empty"><p class="muted">{{ t("borrowing.empty") }}</p><a class="btn btn-primary" href="/browse">{{ t("home.cta.find") }}</a></div>
+{% endfor %}
+</div>
+{% endblock %}

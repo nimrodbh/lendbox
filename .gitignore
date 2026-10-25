@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+*.db
+.pytest_cache/
+.ruff_cache/
+.env
+context/handoff/*
+!context/handoff/README.md
+# private working files: the multi-agent context (local paths, prompts) stays out of the public repo
+context/
+AGENTS.md
+GEMINI.md

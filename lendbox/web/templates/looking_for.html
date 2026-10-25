@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{ t("looking.title") }}{% endblock %}
+{% block content %}
+<h1>{{ t("looking.title") }}</h1>
+{% if error %}<p class="notice warn" role="alert">{{ error }}</p>{% endif %}
+<div class="item-layout section">
+  <section class="looking">
+    {% for p in posts %}
+      <article class="card pad"><b>{{ p.title }}</b>
+        {% if p.body %}<p class="small">{{ p.body }}</p>{% endif %}
+        <p class="xs muted">{{ p.author_name }} · {{ p.area_name }}{% if p.range %} · {{ p.range|range }}{% endif %}</p></article>
+    {% else %}<p class="muted">{{ t("looking.empty") }}</p>{% endfor %}
+  </section>
+  <aside class="card pad stack">
+    <h2>{{ t("looking.post") }}</h2>
+    {% if user %}
+    <form method="post" action="/looking-for" class="stack">
+      <input type="hidden" name="csrf_token" value="{{ csrf }}">
+      <div class="field"><label for="title">{{ t("looking.post.title") }}</label><input class="input" id="title" name="title" maxlength="80" required></div>
+      <div class="field"><label for="body">{{ t("looking.post.body") }}</label><textarea class="input" id="body" name="body" maxlength="1000"></textarea></div>
+      <div class="field"><label for="area">{{ t("browse.area") }}</label>
+        <select class="input" id="area" name="area">{% for a in areas %}<option value="{{ a.id }}">{{ "  " * (a.depth - 1) }}{{ a.name }}</option>{% endfor %}</select></div>
+      <div class="field"><label for="interest">{{ t("browse.interest") }}</label>
+        <select class="input" id="interest" name="interest"><option value="">{{ t("browse.interest.any") }}</option>{% for c in interests %}<option value="{{ c.id }}">{{ c.name }}</option>{% endfor %}</select></div>
+      <div class="two">
+        <div class="field"><label for="start">{{ t("browse.start") }}</label><input class="input" id="start" name="start" type="date"></div>
+        <div class="field"><label for="last_day">{{ t("browse.last_day") }}</label><input class="input" id="last_day" name="last_day" type="date"></div>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">{{ t("looking.post.submit") }}</button>
+    </form>
+    {% else %}<a class="btn btn-primary" href="/login?next=/looking-for">{{ t("nav.login") }}</a>{% endif %}
+  </aside>
+</div>
+{% endblock %}

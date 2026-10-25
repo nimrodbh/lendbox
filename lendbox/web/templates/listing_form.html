@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}{{ t("listing.new.title") }}{% endblock %}
+{% macro err(name) %}{% if error and error.field == name %}<p class="err" id="{{ name }}-err" role="alert">{{ t(error.key) }}</p>{% endif %}{% endmacro %}
+{% macro bad(name) %}{% if error and error.field == name %}aria-invalid="true" aria-describedby="{{ name }}-err" autofocus{% endif %}{% endmacro %}
+{% block content %}
+<div class="narrow card pad stack">
+  <h1>{{ t("listing.new.title") }}</h1>
+  <p class="muted">{{ cat.name }}</p>
+  <form method="post" action="/listings/new" class="stack" novalidate>
+    <input type="hidden" name="csrf_token" value="{{ csrf }}">
+    <input type="hidden" name="category" value="{{ cat.id }}">
+    <div class="field"><label for="title">{{ t("listing.title") }}</label>
+      <input class="input" id="title" name="title" maxlength="80" value="{{ values.get('title', '') }}" {{ bad("title") }}>
+      <p class="hint small muted">{{ t("listing.title.hint") }}</p>{{ err("title") }}</div>
+    <div class="field"><label for="description">{{ t("listing.description") }}</label>
+      <textarea class="input" id="description" name="description" maxlength="2000">{{ values.get('description', '') }}</textarea></div>
+    <div class="field"><label for="condition">{{ t("listing.condition") }}</label>
+      <select class="input" id="condition" name="condition" {{ bad("condition") }}>
+        {% for c in ["new", "like_new", "good", "fair"] %}<option value="{{ c }}" {% if values.get('condition', 'good') == c %}selected{% endif %}>{{ t("condition." ~ c) }}</option>{% endfor %}
+      </select>{{ err("condition") }}</div>
+    <div class="two">
+      <div class="field"><label for="price">{{ t("listing.price") }}</label>
+        <input class="input" id="price" name="price" inputmode="decimal" value="{{ values.get('price', '0') }}" {{ bad("price") }}>{{ err("price") }}</div>
+      <div class="field"><label for="deposit">{{ t("listing.deposit") }}</label>
+        <input class="input" id="deposit" name="deposit" inputmode="decimal" value="{{ values.get('deposit', '') }}" {{ bad("deposit") }}>{{ err("deposit") }}</div>
+    </div>
+    <p class="hint small muted">{{ t("listing.deposit.hint") }}</p>
+    <div class="field"><label for="min_units">{{ t("listing.min_units") }}</label>
+      <input class="input" id="min_units" name="min_units" type="number" min="1" max="30" value="{{ values.get('min_units', '1') }}" {{ bad("min_units") }}>{{ err("min_units") }}</div>
+    <div class="field"><label for="area">{{ t("listing.area") }}</label>
+      <select class="input" id="area" name="area" {{ bad("area") }}>
+        {% for a in areas %}<option value="{{ a.id }}" {% if values.get('area') == a.id|string %}selected{% endif %}>{{ "  " * (a.depth - 1) }}{{ a.name }}</option>{% endfor %}
+      </select><p class="hint small muted">{{ t("listing.area.hint") }}</p>{{ err("area") }}</div>
+    <div class="field"><label for="pickup_detail">{{ t("listing.pickup_detail") }}</label>
+      <input class="input" id="pickup_detail" name="pickup_detail" maxlength="200" value="{{ values.get('pickup_detail', '') }}"></div>
+    <fieldset class="field"><legend>{{ t("listing.interests") }}</legend>
+      {% set chosen = values.get('interests', '').split(',') %}
+      <div class="row wrap">{% for c in interests %}
+        <label class="chip"><input type="checkbox" name="interests" value="{{ c.id }}" {% if c.id|string in chosen %}checked{% endif %}> {{ c.name }}</label>
+      {% endfor %}</div>{{ err("interests") }}</fieldset>
+    {% if fields %}
+      <h2>{{ t("listing.details", category=cat.name) }}</h2>
+      {% for f in fields %}{% set name = "attr_" ~ f.name %}
+        <div class="field">
+          {% if f.kind == "checkbox" %}
+            <label><input type="checkbox" name="{{ name }}" {% if values.get(name) %}checked{% endif %}> {{ f.label }}</label>
+          {% else %}
+            <label for="{{ name }}">{{ f.label }}</label>
+            {% if f.kind == "select" %}
+              <select class="input" id="{{ name }}" name="{{ name }}" {{ bad(name) }}>
+                {% if not f.required %}<option value=""></option>{% endif %}
+                {% for o in f.options %}<option value="{{ o }}" {% if values.get(name) == o %}selected{% endif %}>{{ o.replace("_", " ") }}</option>{% endfor %}
+              </select>
+            {% else %}
+              <input class="input" id="{{ name }}" name="{{ name }}" type="{{ f.kind }}" {% if f.kind == "number" %}step="{{ f.step }}"{% endif %}
+                     value="{{ values.get(name, '') }}" {{ bad(name) }}>
+            {% endif %}
+          {% endif %}
+          {{ err(name) }}
+        </div>
+      {% endfor %}
+    {% endif %}
+    <button class="btn btn-primary btn-block" type="submit">{{ t("listing.save") }}</button>
+  </form>
+</div>
+{% endblock %}
