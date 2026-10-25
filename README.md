@@ -4,7 +4,7 @@
 
 **A neighborhood library of things.** Neighbors lend each other tools, camping gear, instruments and electronics for a date range, with a deposit, and review each other after the return. Listings live in communities by interest (Musicians, Students, Builders) and by area (a city, with its neighborhoods and campuses inside it).
 
-**Live demo:** _link added after deploy_ · one click signs you in as a demo lender or borrower; no sign-up, and the data resets daily. (Free hosting: the first visit after a quiet spell can take up to a minute to wake the server.)
+**Live demo: [lendbox.onrender.com](https://lendbox.onrender.com)** · one click signs you in as a demo lender or borrower; no sign-up, and the data resets daily. (Free hosting: the first visit after a quiet spell can take up to a minute to wake the server.)
 
 ![Home page with the one-click demo](docs/screenshots/home.png)
 

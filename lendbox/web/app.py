@@ -73,6 +73,8 @@ SECURITY_HEADERS = {
     "Referrer-Policy": "same-origin",
     "X-Frame-Options": "DENY",
 }
+if SECURE_COOKIES:  # served over HTTPS only: tell browsers never to try plain HTTP for a year
+    SECURITY_HEADERS["Strict-Transport-Security"] = "max-age=31536000"
 CONTACT_EMAIL = os.environ.get("LENDBOX_CONTACT_EMAIL", "contact@lendbox.example")
 LEGAL_UPDATED = "October 25, 2026"
 

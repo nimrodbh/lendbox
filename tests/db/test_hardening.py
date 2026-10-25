@@ -252,5 +252,14 @@ def test_production_refuses_insecure_cookies():
     assert run.returncode != 0 and "LENDBOX_SECURE_COOKIES" in run.stderr
 
 
+def test_hsts_only_when_served_over_https():
+    code = "import lendbox.web.app as a; print(a.SECURITY_HEADERS.get('Strict-Transport-Security'))"
+    secure = {**os.environ, "LENDBOX_SECURE_COOKIES": "1"}
+    plain = {k: v for k, v in os.environ.items() if k != "LENDBOX_SECURE_COOKIES"}
+    out = [subprocess.run([sys.executable, "-c", code], check=True, env=e, capture_output=True, text=True).stdout
+           for e in (secure, plain)]
+    assert out[0].startswith("max-age=") and out[1].strip() == "None"
+
+
 def test_legal_pages_show_the_configured_contact(client):
     assert "contact@lendbox.example" in client.get("/privacy").text
