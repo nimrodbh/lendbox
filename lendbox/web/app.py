@@ -14,6 +14,7 @@ import asyncio
 import hmac
 import os
 import secrets
+import time
 from collections.abc import Iterator
 from contextlib import asynccontextmanager
 from datetime import UTC, date, datetime, timedelta
@@ -57,8 +58,8 @@ ENV = os.environ.get("LENDBOX_ENV", "development")
 SESSION_COOKIE = "lb_session"
 CSRF_COOKIE = "lb_csrf"
 SECURE_COOKIES = os.environ.get("LENDBOX_SECURE_COOKIES") == "1"
-DEV_MAIL = os.environ.get("LENDBOX_DEV_MAIL") == "1"
-DEMO = os.environ.get("LENDBOX_DEMO") == "1"  # public demo: one-click demo accounts, no sign-up, daily reset  # show the verification link on screen instead of emailing it
+DEV_MAIL = os.environ.get("LENDBOX_DEV_MAIL") == "1"  # show the verification link on screen instead of emailing it
+DEMO = os.environ.get("LENDBOX_DEMO") == "1"  # public demo: one-click demo accounts, no sign-up, daily reset
 BASE_URL = os.environ.get("LENDBOX_BASE_URL", "http://localhost:8000")
 if ENV == "production" and (not SECURE_COOKIES or DEV_MAIL):
     # Threat model, threat 14: never serve production with cleartext cookies or on-screen verification links.
@@ -79,23 +80,49 @@ CONTACT_EMAIL = os.environ.get("LENDBOX_CONTACT_EMAIL", "contact@lendbox.example
 LEGAL_UPDATED = "October 25, 2026"
 
 web_root = resources.files("lendbox.web")
-EXPIRY_EVERY_SECONDS = 30
+HOUSEKEEPING_EVERY_SECONDS = 30
+ACTIVE_WINDOW = timedelta(minutes=15)  # housekeeping touches the database only this long after a real visit
+QUIET_BEFORE_RESET = timedelta(minutes=20)  # the demo reset waits for this much silence, so no visitor sees it
+
+# Monotonic time of the last real visit (not /ping, /healthz or static files). Starts "long ago".
+_last_visit = -1e12
+_next_demo_reset: datetime | None = None  # unknown until the first check
+
+
+def plan_housekeeping(*, idle: timedelta, now: datetime, next_reset: datetime | None, demo: bool) -> tuple[bool, bool]:
+    """What this round should do: (routine work, demo reset check). Pure, so the rules are testable.
+
+    Routine work (expiring requests, sending mail) runs only while people are using the site; when nobody is,
+    nothing touches the database and the free database can scale to zero. The demo world is checked once on
+    startup (to load it if missing), and reset only after a quiet spell, never under a visitor's feet.
+    """
+    routine = idle < ACTIVE_WINDOW
+    reset_check = demo and (next_reset is None or (now >= next_reset and idle >= QUIET_BEFORE_RESET))
+    return routine, reset_check
 
 
 def _housekeeping() -> None:
-    """Close lapsed requests and send queued mail (if a sender is configured)."""
+    global _next_demo_reset
+    now = datetime.now(UTC)
+    idle = timedelta(seconds=time.monotonic() - _last_visit)
+    routine, reset_check = plan_housekeeping(idle=idle, now=now, next_reset=_next_demo_reset, demo=DEMO)
+    if not (routine or reset_check):
+        return
     with connect() as conn:
-        if DEMO:
-            demo.ensure_fresh(conn, now=datetime.now(UTC))
-        repo.expire_due_bookings(conn, now=datetime.now(UTC))
-        send = mail.sender()
-        if send:
-            accounts.deliver_outbox(conn, send=send, now=datetime.now(UTC), base_url=BASE_URL)
+        if reset_check:
+            # First check after startup only loads a missing world; later checks reset a stale one.
+            loaded_at = demo.ensure_fresh(conn, now=now, missing_only=_next_demo_reset is None)
+            _next_demo_reset = loaded_at + demo.RESET_EVERY
+        if routine:
+            repo.expire_due_bookings(conn, now=now)
+            send = mail.sender()
+            if send:
+                accounts.deliver_outbox(conn, send=send, now=now, base_url=BASE_URL)
 
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
-    """Every half minute: close lapsed requests (reads already treat them as closed) and drain the outbox."""
+    """Every half minute, run `_housekeeping` (see `plan_housekeeping` for what it does when)."""
 
     async def loop() -> None:
         while True:
@@ -103,7 +130,7 @@ async def lifespan(_: FastAPI):
                 await asyncio.to_thread(_housekeeping)
             except psycopg.Error:
                 pass  # the database may be restarting; try again next round
-            await asyncio.sleep(EXPIRY_EVERY_SECONDS)
+            await asyncio.sleep(HOUSEKEEPING_EVERY_SECONDS)
 
     task = asyncio.create_task(loop())
     yield
@@ -161,8 +188,14 @@ async def csrf_protect(request: Request) -> None:
 Csrf = Depends(csrf_protect)
 
 
+_UNTRACKED = ("/ping", "/healthz", "/static/")
+
+
 @app.middleware("http")
 async def csrf_cookie(request: Request, call_next):
+    global _last_visit
+    if not request.url.path.startswith(_UNTRACKED):
+        _last_visit = time.monotonic()
     token = request.cookies.get(CSRF_COOKIE)
     fresh = token is None
     request.state.csrf = token or secrets.token_urlsafe(32)
@@ -201,6 +234,13 @@ def require_user(user: dict | None, next_url: str) -> dict:
 
 
 # ---- pages --------------------------------------------------------------------------------------------------
+
+
+@app.get("/ping")
+def ping() -> dict:
+    """Liveness without the database: for the host's health check and the keep-alive job, so neither one
+    keeps the free database awake."""
+    return {"ok": True}
 
 
 @app.get("/healthz")

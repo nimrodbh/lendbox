@@ -6,7 +6,7 @@ services:
     runtime: docker
     plan: free
     region: frankfurt  # same region as the Neon database (AWS eu-central-1), and the closest to Israel
-    healthCheckPath: /healthz
+    healthCheckPath: /ping  # no database query, so health checks never keep the database awake
     autoDeploy: true
     envVars:
       - key: LENDBOX_DATABASE_URL

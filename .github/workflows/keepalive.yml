@@ -1,0 +1,16 @@
+name: keep-alive
+# The free web service sleeps after 15 idle minutes and the next visitor waits for it to wake. A light ping
+# every 10 minutes keeps the public demo responsive. /ping does not touch the database, so the free database
+# can still scale to zero between real visits. (GitHub may delay scheduled runs; that only means a slower
+# first load, never an error.)
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping the demo
+        run: curl --fail --silent --show-error --max-time 120 --retry 2 https://lendbox.onrender.com/ping

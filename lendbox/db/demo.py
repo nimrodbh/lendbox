@@ -18,24 +18,27 @@ RESET_EVERY = timedelta(hours=24)
 LOCK_ID = 7_310_002
 
 
-def ensure_fresh(conn: psycopg.Connection, *, now: datetime, password: str | None = None) -> bool:
-    """Load the demo world if it is missing or older than a day. Returns True if it (re)loaded.
+def ensure_fresh(
+    conn: psycopg.Connection, *, now: datetime, missing_only: bool = False, password: str | None = None
+) -> datetime:
+    """Load the demo world if it is missing, or (unless `missing_only`) older than a day. Returns when the
+    world now in the database was loaded.
 
-    An advisory lock makes this safe when several workers wake up at once: one resets, the others wait and
+    An advisory lock makes this safe when several workers wake up at once: one loads, the others wait and
     then see a fresh world.
     """
     with conn.transaction():
         conn.execute("SELECT pg_advisory_xact_lock(%s)", (LOCK_ID,))
         row = conn.execute("SELECT loaded_at FROM demo_state WHERE id = 1").fetchone()
-        if row and now - row["loaded_at"] < RESET_EVERY:
-            return False
+        if row and (missing_only or now - row["loaded_at"] < RESET_EVERY):
+            return row["loaded_at"]
         seed.reset(conn)
         seed.load(conn, now=now, password=password)
         conn.execute(
             "INSERT INTO demo_state (id, loaded_at) VALUES (1, %s) ON CONFLICT (id) DO UPDATE SET loaded_at = %s",
             (now, now),
         )
-    return True
+    return now
 
 
 def demo_user(conn: psycopg.Connection, *, role: str, now: datetime) -> int:

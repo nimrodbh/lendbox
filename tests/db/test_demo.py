@@ -16,15 +16,52 @@ from .conftest import NOW
 @pytest.fixture
 def fresh(conn):
     conn.execute("DELETE FROM demo_state")
-    assert demo.ensure_fresh(conn, now=NOW, password="demo pw for tests")
+    assert demo.ensure_fresh(conn, now=NOW, password="demo pw for tests") == NOW
     return conn
 
 
 def test_world_loads_once_a_day(fresh):
-    assert not demo.ensure_fresh(fresh, now=NOW + timedelta(hours=23), password="x")
+    assert demo.ensure_fresh(fresh, now=NOW + timedelta(hours=23), password="x") == NOW  # still fresh
     fresh.execute("UPDATE listings SET title = 'Vandalised' WHERE id = 1")
-    assert demo.ensure_fresh(fresh, now=NOW + timedelta(hours=25), password="x")
+    later = NOW + timedelta(hours=25)
+    assert demo.ensure_fresh(fresh, now=later, password="x") == later
     assert fresh.execute("SELECT title FROM listings WHERE id = 1").fetchone()["title"] != "Vandalised"
+
+
+def test_startup_check_never_resets_a_stale_world(fresh):
+    """A visitor who wakes the server must not land in the middle of a reset."""
+    fresh.execute("UPDATE listings SET title = 'Kept' WHERE id = 1")
+    assert demo.ensure_fresh(fresh, now=NOW + timedelta(days=3), missing_only=True, password="x") == NOW
+    assert fresh.execute("SELECT title FROM listings WHERE id = 1").fetchone()["title"] == "Kept"
+
+
+def test_ping_needs_no_database(monkeypatch):
+    monkeypatch.setenv("LENDBOX_DATABASE_URL", "postgresql://nobody@127.0.0.1:1/none")
+    with TestClient(web.app) as c:
+        assert c.get("/ping").json() == {"ok": True}
+
+
+START = NOW
+QUIET = web.QUIET_BEFORE_RESET
+
+
+@pytest.mark.parametrize(
+    ("idle", "now", "next_reset", "expected"),
+    [
+        (timedelta(minutes=1), START, START, (True, False)),             # visitors around: routine, no reset
+        (timedelta(minutes=30), START, START, (False, True)),            # quiet and due: reset, nothing else
+        (timedelta(minutes=30), START, START + timedelta(hours=1), (False, False)),  # quiet, not due: sleep
+        (timedelta(hours=5), START, None, (False, True)),                # just started: check (missing only)
+        (timedelta(minutes=10), START, START, (True, False)),            # due, but a visitor was here recently
+        (QUIET - timedelta(seconds=1), START, START, (False, False)),     # due, routine over, not quiet enough
+    ],
+)
+def test_housekeeping_plan(idle, now, next_reset, expected):
+    assert web.plan_housekeeping(idle=idle, now=now, next_reset=next_reset, demo=True) == expected
+
+
+def test_housekeeping_plan_outside_demo():
+    assert web.plan_housekeeping(idle=timedelta(hours=1), now=START, next_reset=None, demo=False) == (False, False)
 
 
 def test_demo_accounts_have_something_to_show(fresh):
