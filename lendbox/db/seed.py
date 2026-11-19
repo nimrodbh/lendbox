@@ -42,6 +42,8 @@ def load(conn: psycopg.Connection, *, now: datetime, seed_dir: Path = SEED_DIR, 
     """Insert the demo world in one transaction. Returns row counts. Refuses a database that has users."""
     world = json.loads((seed_dir / "demo.json").read_text(encoding="utf-8"))
     schemas = json.loads((seed_dir / "category_schemas.json").read_text(encoding="utf-8"))
+    photos_file = seed_dir / "photos.json"  # written by scripts/fetch_demo_photos.py; optional
+    photos = json.loads(photos_file.read_text(encoding="utf-8")) if photos_file.exists() else {}
     today = now.astimezone(LOCAL_TZ).date()
     pw_hash = hash_password(password or os.environ.get("LENDBOX_DEMO_PASSWORD", DEFAULT_DEMO_PASSWORD))
     ids: dict[str, dict[str, int]] = {"user": {}, "community": {}, "category": {}, "listing": {}, "booking": {}}
@@ -92,6 +94,11 @@ def load(conn: psycopg.Connection, *, now: datetime, seed_dir: Path = SEED_DIR, 
                  li["status"], created, created),
             )
             ids["listing"][li["key"]] = lid
+            if li["key"] in photos:
+                conn.execute(
+                    "INSERT INTO listing_photos (listing_id, path, position) VALUES (%s, %s, 0)",
+                    (lid, photos[li["key"]]["file"]),
+                )
             for slug in li["interests"]:
                 conn.execute(
                     "INSERT INTO listing_interests (listing_id, community_id) VALUES (%s, %s)",

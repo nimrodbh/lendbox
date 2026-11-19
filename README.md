@@ -74,3 +74,4 @@ Deployment: `render.yaml` describes the service (Docker, free plan) and the sett
 - [Design spec](docs/design-spec.md) and the [clickable prototype](design/prototype.html)
 - [ADR 0001](docs/adr/0001-listing-polymorphism.md): listing model, date ranges, the area tree
 - [Threat model](docs/threat-model.md)
+- [Photo credits](docs/photo-credits.md): demo photos from Pixabay, fetched and resized by `scripts/fetch_demo_photos.py`

@@ -28,7 +28,7 @@
   <div class="grid">
     {% for l in results %}
       <a class="item" href="/items/{{ l.id }}">
-        <div class="tile t-tools"><span class="badge">{{ l.category_name }}</span></div>
+        <div class="tile t-tools">{% if l.photo %}<img src="/static/{{ l.photo }}" alt="" loading="lazy" width="800" height="600">{% endif %}<span class="badge">{{ l.category_name }}</span></div>
         <div class="item-body"><p class="item-title">{{ l.title }}</p>
           <p class="small"><span class="price">{% if l.price_per_unit_agorot == 0 %}{{ t("price.free") }}{% else %}{{ t("price.per_day", amount=l.price_per_unit_agorot|ils) }}{% endif %}</span></p>
           <p class="xs muted">{{ l.area_name }}</p></div>

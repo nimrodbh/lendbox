@@ -8,6 +8,7 @@ the most loans, preferring one who still owes a review.
 
 from __future__ import annotations
 
+import hashlib
 from datetime import datetime, timedelta
 
 import psycopg
@@ -15,28 +16,41 @@ import psycopg
 from . import seed
 
 RESET_EVERY = timedelta(hours=24)
+
+
+def seed_version() -> str:
+    """A fingerprint of the demo files, so new demo data is noticed at the next start."""
+    h = hashlib.sha256()
+    for name in ("demo.json", "photos.json", "category_schemas.json"):
+        path = seed.SEED_DIR / name
+        if path.exists():
+            h.update(path.read_bytes())
+    return h.hexdigest()[:16]
 LOCK_ID = 7_310_002
 
 
 def ensure_fresh(
     conn: psycopg.Connection, *, now: datetime, missing_only: bool = False, password: str | None = None
 ) -> datetime:
-    """Load the demo world if it is missing, or (unless `missing_only`) older than a day. Returns when the
-    world now in the database was loaded.
+    """Load the demo world if it is missing or came from older demo files, or (unless `missing_only`) is
+    older than a day. Returns when the world now in the database was loaded.
 
     An advisory lock makes this safe when several workers wake up at once: one loads, the others wait and
     then see a fresh world.
     """
     with conn.transaction():
         conn.execute("SELECT pg_advisory_xact_lock(%s)", (LOCK_ID,))
-        row = conn.execute("SELECT loaded_at FROM demo_state WHERE id = 1").fetchone()
-        if row and (missing_only or now - row["loaded_at"] < RESET_EVERY):
+        version = seed_version()
+        row = conn.execute("SELECT loaded_at, seed_version FROM demo_state WHERE id = 1").fetchone()
+        current = row is not None and row["seed_version"] == version
+        if current and (missing_only or now - row["loaded_at"] < RESET_EVERY):
             return row["loaded_at"]
         seed.reset(conn)
         seed.load(conn, now=now, password=password)
         conn.execute(
-            "INSERT INTO demo_state (id, loaded_at) VALUES (1, %s) ON CONFLICT (id) DO UPDATE SET loaded_at = %s",
-            (now, now),
+            "INSERT INTO demo_state (id, loaded_at, seed_version) VALUES (1, %s, %s) "
+            "ON CONFLICT (id) DO UPDATE SET loaded_at = EXCLUDED.loaded_at, seed_version = EXCLUDED.seed_version",
+            (now, version),
         )
     return now
 

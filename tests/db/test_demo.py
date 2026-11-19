@@ -35,6 +35,20 @@ def test_startup_check_never_resets_a_stale_world(fresh):
     assert fresh.execute("SELECT title FROM listings WHERE id = 1").fetchone()["title"] == "Kept"
 
 
+def test_new_demo_files_reload_even_on_startup(fresh, monkeypatch):
+    """A deploy with new demo data (say, photos) shows it at once, not after the next daily reset."""
+    fresh.execute("UPDATE listings SET title = 'Old data' WHERE id = 1")
+    monkeypatch.setattr(demo, "seed_version", lambda: "a-newer-version")
+    later = NOW + timedelta(hours=1)
+    assert demo.ensure_fresh(fresh, now=later, missing_only=True, password="x") == later
+    assert fresh.execute("SELECT title FROM listings WHERE id = 1").fetchone()["title"] != "Old data"
+
+
+def test_demo_photos_are_loaded(fresh):
+    n = fresh.execute("SELECT count(*) AS n FROM listing_photos").fetchone()["n"]
+    assert n == fresh.execute("SELECT count(*) AS n FROM listings").fetchone()["n"]
+
+
 def test_ping_needs_no_database(monkeypatch):
     monkeypatch.setenv("LENDBOX_DATABASE_URL", "postgresql://nobody@127.0.0.1:1/none")
     with TestClient(web.app) as c:

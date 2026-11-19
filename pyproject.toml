@@ -15,6 +15,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "httpx>=0.27", "ruff>=0.5"]
+photos = ["pillow>=10"]  # only for scripts/fetch_demo_photos.py
 
 [tool.setuptools.packages.find]
 include = ["lendbox*"]
@@ -22,7 +23,7 @@ include = ["lendbox*"]
 [tool.setuptools.package-data]
 "lendbox.db" = ["migrations/*.sql"]
 "lendbox.i18n" = ["*.json"]
-"lendbox.web" = ["templates/*.html", "templates/legal/*.html", "static/*"]
+"lendbox.web" = ["templates/*.html", "templates/legal/*.html", "static/*", "static/listings/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

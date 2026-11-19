@@ -317,7 +317,8 @@ def search_listings(
     return conn.execute(
         """
         SELECT l.id, l.title, l.condition, l.price_per_unit_agorot, l.deposit_agorot,
-               a.name AS area_name, c.name AS category_name, c.slug AS category_slug, c.booking_unit
+               a.name AS area_name, c.name AS category_name, c.slug AS category_slug, c.booking_unit,
+               (SELECT p.path FROM listing_photos p WHERE p.listing_id = l.id ORDER BY p.position LIMIT 1) AS photo
         FROM listings l
         JOIN communities a ON a.id = l.area_id
         JOIN categories c ON c.id = l.category_id
@@ -363,7 +364,8 @@ def listing_detail(conn: psycopg.Connection, *, listing_id: int, today: date) ->
                l.min_units, l.late_fee_agorot, l.pickup_detail, l.owner_id, l.status,
                u.display_name AS owner_name, u.email_verified_at IS NOT NULL AS owner_verified,
                a.name AS area_name, c.name AS category_name, c.booking_unit, c.prohibited,
-               u.hidden_at IS NOT NULL AS owner_hidden
+               u.hidden_at IS NOT NULL AS owner_hidden,
+               (SELECT p.path FROM listing_photos p WHERE p.listing_id = l.id ORDER BY p.position LIMIT 1) AS photo
         FROM listings l
         JOIN users u ON u.id = l.owner_id
         JOIN communities a ON a.id = l.area_id

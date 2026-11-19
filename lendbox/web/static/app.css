@@ -184,3 +184,6 @@ details.report summary{cursor:pointer;color:var(--text-muted);font-size:var(--fs
 .demo-bar{margin:0;padding:var(--s-2) var(--s-4);background:var(--accent-soft);color:var(--text);font-size:var(--fs-sm);text-align:center}
 /* no photos yet: keep the placeholder tile short on the item page */
 .item-layout .tile{aspect-ratio:16/6}
+/* listing photos fill the tile; the badge stays on top */
+.tile img{position:absolute;inset:0;inline-size:100%;block-size:100%;object-fit:cover}
+.item-layout .tile.has-photo{aspect-ratio:4/3}

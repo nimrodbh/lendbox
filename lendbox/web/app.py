@@ -132,9 +132,11 @@ async def lifespan(_: FastAPI):
                 pass  # the database may be restarting; try again next round
             await asyncio.sleep(HOUSEKEEPING_EVERY_SECONDS)
 
-    task = asyncio.create_task(loop())
+    # Tests run on a fixed clock; the loop runs on the real one and would expire their requests mid-test.
+    task = asyncio.create_task(loop()) if os.environ.get("LENDBOX_HOUSEKEEPING", "1") == "1" else None
     yield
-    task.cancel()
+    if task:
+        task.cancel()
 
 
 app = FastAPI(title="Lendbox", lifespan=lifespan)

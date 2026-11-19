@@ -4,7 +4,7 @@
 {% block content %}
 <div class="item-layout">
   <section class="stack">
-    <div class="tile t-tools"><span class="badge">{{ listing.category_name }}</span></div>
+    <div class="tile t-tools{% if listing.photo %} has-photo{% endif %}">{% if listing.photo %}<img src="/static/{{ listing.photo }}" alt="{{ listing.title }}" width="800" height="600">{% endif %}<span class="badge">{{ listing.category_name }}</span></div>
     <h1>{{ listing.title }}</h1>
     <div class="owner"><span class="avatar">{{ listing.owner_name[:1] }}</span>
       <div><b>{{ t("item.owner", name=listing.owner_name) }}</b>

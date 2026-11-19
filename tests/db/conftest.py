@@ -13,6 +13,7 @@ from lendbox.db.connection import connect
 from lendbox.db.migrate import migrate
 
 TEST_DSN = os.environ.get("LENDBOX_TEST_DATABASE_URL")
+os.environ["LENDBOX_HOUSEKEEPING"] = "0"  # the app's background loop uses the real clock, the tests a fixed one
 NOW = datetime(2026, 11, 1, 9, 0, tzinfo=UTC)
 
 
