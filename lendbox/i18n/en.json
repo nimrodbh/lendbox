@@ -233,5 +233,6 @@
   "demo.as_borrower": "Try as a borrower",
   "demo.note": "No sign-up and no email. Whatever you change disappears at the next daily reset.",
   "demo.signup_off": "Sign-up is turned off in the demo. Use Try the demo on the home page to step into a ready-made account.",
-  "rating.summary.one": "{avg} from 1 review"
+  "rating.summary.one": "{avg} from 1 review",
+  "footer.code": "Source code on GitHub"
 }
