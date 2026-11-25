@@ -1,5 +1,9 @@
 {
   "app.name": "Lendbox",
+  "meta.title": "Lendbox: a neighborhood library of things",
+  "meta.description": "Borrow tools, camping gear and instruments from people nearby for the dates you need, and lend what you don't use.",
+  "meta.demo": "A public demo: everyone and everything in it is made up.",
+  "meta.image_alt": "Lendbox: borrow what you need, lend what you don't use. Photos of a drill, a guitar, a tent and a camera.",
   "nav.browse": "Browse",
   "nav.lending": "Your lending",
   "nav.login": "Log in",

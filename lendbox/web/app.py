@@ -195,6 +195,7 @@ def ils(agorot: int) -> str:
 
 
 templates.env.globals["t"] = t
+templates.env.globals["base_url"] = BASE_URL  # absolute addresses for the link preview (Open Graph) tags
 templates.env.filters["ils"] = ils
 templates.env.filters["range"] = format_range
 

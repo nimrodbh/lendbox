@@ -52,6 +52,22 @@ def log_in(client, email, password=PW, next_url="/browse"):
     )
 
 
+def test_every_page_carries_a_link_preview(client, world):
+    """A link pasted into LinkedIn or WhatsApp shows a title, a description and a picture."""
+    for path, title in (("/", "Lendbox: a neighborhood library of things"), (f"/items/{world.listing}", None)):
+        page = client.get(path).text
+        assert '<meta property="og:image" content="http://localhost:8000/static/og-card.jpg">' in page
+        assert f'<meta property="og:url" content="http://localhost:8000{path}">' in page
+        assert '<meta name="description" content="Borrow tools' in page
+        assert '<link rel="icon" href="/static/favicon.svg"' in page
+        if title:
+            assert f"<title>{title}</title>" in page and f'<meta property="og:title" content="{title}">' in page
+    for name, kind in (("og-card.jpg", "image/jpeg"), ("favicon.svg", "image/svg+xml"), ("favicon-32.png", "image/png"),
+                       ("apple-touch-icon.png", "image/png")):
+        r = client.get(f"/static/{name}")
+        assert r.status_code == 200 and r.headers["content-type"].startswith(kind), name
+
+
 def test_full_borrowing_flow(client, conn, world):
     sign_up_and_verify(client, conn, "ron@example.test")
     assert log_in(client, "ron@example.test").headers["location"] == "/browse"

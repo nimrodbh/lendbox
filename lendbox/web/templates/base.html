@@ -4,6 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ t("app.name") }}{% endblock %}</title>
+  <meta name="description" content="{{ t("meta.description") }}{% if demo %} {{ t("meta.demo") }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ t("app.name") }}">
+  <meta property="og:title" content="{{ self.title() }}">
+  <meta property="og:description" content="{{ t("meta.description") }}{% if demo %} {{ t("meta.demo") }}{% endif %}">
+  <meta property="og:url" content="{{ base_url }}{{ request.url.path }}">
+  <meta property="og:image" content="{{ base_url }}/static/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="{{ t("meta.image_alt") }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/static/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
   <link rel="stylesheet" href="/static/tokens.css">
   <link rel="stylesheet" href="/static/app.css">
 </head>
