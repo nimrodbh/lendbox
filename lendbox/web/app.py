@@ -12,9 +12,12 @@ from __future__ import annotations
 
 import asyncio
 import hmac
+import http.client
 import os
 import secrets
 import time
+import urllib.parse
+import urllib.request
 from collections.abc import Iterator
 from contextlib import asynccontextmanager
 from datetime import UTC, date, datetime, timedelta
@@ -60,7 +63,12 @@ CSRF_COOKIE = "lb_csrf"
 SECURE_COOKIES = os.environ.get("LENDBOX_SECURE_COOKIES") == "1"
 DEV_MAIL = os.environ.get("LENDBOX_DEV_MAIL") == "1"  # show the verification link on screen instead of emailing it
 DEMO = os.environ.get("LENDBOX_DEMO") == "1"  # public demo: one-click demo accounts, no sign-up, daily reset
-BASE_URL = os.environ.get("LENDBOX_BASE_URL", "http://localhost:8000")
+# The public address: set by hand, or the one the host (Render) reports for this service.
+BASE_URL = (
+    os.environ.get("LENDBOX_BASE_URL") or os.environ.get("RENDER_EXTERNAL_URL") or "http://localhost:8000"
+).rstrip("/")
+# Free hosting puts an idle service to sleep. The public demo keeps itself awake unless told not to.
+KEEP_AWAKE = os.environ.get("LENDBOX_KEEP_AWAKE", "1" if DEMO else "0") == "1"
 if ENV == "production" and (not SECURE_COOKIES or DEV_MAIL):
     # Threat model, threat 14: never serve production with cleartext cookies or on-screen verification links.
     raise RuntimeError("production needs LENDBOX_SECURE_COOKIES=1 and LENDBOX_DEV_MAIL unset")
@@ -83,6 +91,7 @@ web_root = resources.files("lendbox.web")
 HOUSEKEEPING_EVERY_SECONDS = 30
 ACTIVE_WINDOW = timedelta(minutes=15)  # housekeeping touches the database only this long after a real visit
 QUIET_BEFORE_RESET = timedelta(minutes=20)  # the demo reset waits for this much silence, so no visitor sees it
+KEEP_AWAKE_EVERY_SECONDS = 10 * 60  # the free host sleeps after 15 minutes without a request from outside
 
 # Monotonic time of the last real visit (not /ping, /healthz or static files). Starts "long ago".
 _last_visit = -1e12
@@ -120,9 +129,35 @@ def _housekeeping() -> None:
                 accounts.deliver_outbox(conn, send=send, now=now, base_url=BASE_URL)
 
 
+def keep_awake_url(base_url: str, *, enabled: bool) -> str | None:
+    """The address the app calls to stay awake, or None when it should not. Pure, so the rule is testable.
+
+    A free host puts a service to sleep after 15 minutes without a request from outside, and the next visitor
+    then waits on the host's loading page. A request to our own PUBLIC address arrives from outside like any
+    visitor's, so it counts; a request to localhost never leaves the machine, so it does not. `/ping` does not
+    touch the database, so the free database still sleeps between real visits.
+    """
+    address = urllib.parse.urlsplit(base_url)
+    if not enabled or address.scheme not in ("http", "https"):
+        return None
+    if address.hostname in (None, "localhost", "127.0.0.1", "::1"):
+        return None
+    return base_url.rstrip("/") + "/ping"
+
+
+def _ping_self(url: str) -> bool:
+    """One keep-awake request. Never raises: a failed ping only means a slower first load for the next visitor."""
+    try:
+        with urllib.request.urlopen(url, timeout=20) as response:
+            return response.status == 200
+    except (OSError, http.client.HTTPException):
+        return False
+
+
 @asynccontextmanager
 async def lifespan(_: FastAPI):
-    """Every half minute, run `_housekeeping` (see `plan_housekeeping` for what it does when)."""
+    """Every half minute, run `_housekeeping` (see `plan_housekeeping` for what it does when). On free hosting,
+    also call our own public `/ping` every ten minutes (see `keep_awake_url`)."""
 
     async def loop() -> None:
         while True:
@@ -132,10 +167,19 @@ async def lifespan(_: FastAPI):
                 pass  # the database may be restarting; try again next round
             await asyncio.sleep(HOUSEKEEPING_EVERY_SECONDS)
 
-    # Tests run on a fixed clock; the loop runs on the real one and would expire their requests mid-test.
-    task = asyncio.create_task(loop()) if os.environ.get("LENDBOX_HOUSEKEEPING", "1") == "1" else None
+    async def keep_awake(url: str) -> None:
+        while True:
+            await asyncio.sleep(KEEP_AWAKE_EVERY_SECONDS)
+            await asyncio.to_thread(_ping_self, url)
+
+    # Tests run on a fixed clock; the loops run on the real one and would expire their requests mid-test.
+    background = os.environ.get("LENDBOX_HOUSEKEEPING", "1") == "1"
+    url = keep_awake_url(BASE_URL, enabled=KEEP_AWAKE)
+    tasks = [asyncio.create_task(loop())] if background else []
+    if background and url:
+        tasks.append(asyncio.create_task(keep_awake(url)))
     yield
-    if task:
+    for task in tasks:
         task.cancel()
 
 

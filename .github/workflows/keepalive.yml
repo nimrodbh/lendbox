@@ -1,11 +1,15 @@
 name: keep-alive
-# The free web service sleeps after 15 idle minutes and the next visitor waits for it to wake. A light ping
-# every 10 minutes keeps the public demo responsive. /ping does not touch the database, so the free database
-# can still scale to zero between real visits. (GitHub may delay scheduled runs; that only means a slower
-# first load, never an error.)
+# A second line of defence, not the first. The free web service sleeps after 15 idle minutes, and the app
+# keeps itself awake by calling its own /ping every ten minutes (lendbox/web/app.py, keep_awake_url).
+# If the service is ever asleep anyway (a restart, a failed ping), nothing inside it can wake it, so this
+# job pings it from outside.
+#
+# Measured in November 2026: with a ten-minute schedule GitHub started this job about 4 times a day, hours
+# apart. That is far too rare to keep anything awake, and enough to wake it within half a day.
+# /ping does not touch the database, so the free database can still scale to zero between real visits.
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "17,47 * * * *"  # off the hour, when GitHub's scheduler is less busy
   workflow_dispatch:
 
 jobs:

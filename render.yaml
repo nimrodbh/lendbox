@@ -17,6 +17,8 @@ services:
         value: "1"
       - key: LENDBOX_DEMO
         value: "1"
+      # In demo mode the app keeps itself awake on free hosting: every ten minutes it calls its own public
+      # /ping (the address Render reports as RENDER_EXTERNAL_URL). Add LENDBOX_KEEP_AWAKE = "0" to let it sleep.
       - key: LENDBOX_HASH_SALT
         generateValue: true
       - key: LENDBOX_BASE_URL
