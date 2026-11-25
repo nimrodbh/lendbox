@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 {% block title %}{{ t("meta.title") }}{% endblock %}
 {% block content %}
-<section class="hero">
-  <p class="eyebrow">{{ t("home.eyebrow") }}</p>
-  <h1>{{ t("home.title") }}</h1>
-  <p>{{ t("home.lead") }}</p>
-  <a class="btn btn-primary" href="/browse">{{ t("home.cta.find") }}</a>
+<section class="hero{% if featured %} has-photos{% endif %}">
+  <div>
+    <p class="eyebrow">{{ t("home.eyebrow") }}</p>
+    <h1>{{ t("home.title") }}</h1>
+    <p>{{ t("home.lead") }}</p>
+    <a class="btn btn-primary" href="/browse">{{ t("home.cta.find") }}</a>
+  </div>
+  {% if featured %}
+  <div class="hero-photos" role="group" aria-label="{{ t("home.featured") }}">
+    {% for item in featured %}
+    <a class="tile t-tools" href="/items/{{ item.id }}"><img src="/static/{{ item.photo }}" alt="{{ item.title }}" width="800" height="600"><span class="badge">{{ item.category_name }}</span></a>
+    {% endfor %}
+  </div>
+  {% endif %}
 </section>
 {% if demo %}
 <section id="demo" class="card pad stack section">

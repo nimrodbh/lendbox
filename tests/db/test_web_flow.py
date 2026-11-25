@@ -68,6 +68,16 @@ def test_every_page_carries_a_link_preview(client, world):
         assert r.status_code == 200 and r.headers["content-type"].startswith(kind), name
 
 
+def test_home_shows_photos_of_listed_items(client, conn, world):
+    assert 'class="hero-photos"' not in client.get("/").text  # nothing has a photo yet: the plain headline
+    conn.execute(
+        "INSERT INTO listing_photos (listing_id, path, position) VALUES (%s, 'listings/l001.webp', 0)", (world.listing,)
+    )
+    home = client.get("/").text
+    assert 'class="hero-photos"' in home
+    assert f'href="/items/{world.listing}"><img src="/static/listings/l001.webp"' in home
+
+
 def test_full_borrowing_flow(client, conn, world):
     sign_up_and_verify(client, conn, "ron@example.test")
     assert log_in(client, "ron@example.test").headers["location"] == "/browse"

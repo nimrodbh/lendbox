@@ -296,6 +296,20 @@ def healthz(conn: Conn) -> dict:
     return {"ok": True, "migrations": [r["name"] for r in rows]}
 
 
+def pick_featured(found: list[dict], count: int = 4) -> list[dict]:
+    """A few listings with photos for the home page, at most one per category, so the first screen shows how
+    different the things on offer are. Keeps the order it was given (newest first)."""
+    picked: list[dict] = []
+    seen: set[str] = set()
+    for item in found:
+        if item["photo"] and item["category_slug"] not in seen:
+            seen.add(item["category_slug"])
+            picked.append(item)
+            if len(picked) == count:
+                break
+    return picked
+
+
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request, conn: Conn, user: User):
     comms = repo.communities(conn)
@@ -303,6 +317,7 @@ def home(request: Request, conn: Conn, user: User):
         request,
         "home.html",
         user,
+        featured=pick_featured(repo.search_listings(conn, limit=24)),
         interests=[c for c in comms if c["kind"] == "interest"],
         areas=[c for c in comms if c["kind"] == "area" and c["area_level"] != "country"],
     )

@@ -48,7 +48,7 @@ flowchart LR
 
 - **Python 3.12, FastAPI, server-rendered Jinja** (no JavaScript framework), **PostgreSQL 16** through psycopg 3 with plain SQL and numbered migrations (no ORM, so the constraints stay visible).
 - **Domain layer is pure** (no I/O): the booking state machine, prices in integer agorot, half-open date ranges. 220 table-driven tests cover every state, event and actor.
-- **434 tests**, all against a real PostgreSQL (never SQLite), run in GitHub Actions with ruff.
+- **465 tests**, the database ones against a real PostgreSQL (never SQLite), run in GitHub Actions with ruff.
 - **Accessible and RTL-ready**: logical CSS properties, labelled fields, errors announced to screen readers; every user-facing string sits in one catalog so Hebrew is a translation, not a rewrite.
 
 ## Run it locally

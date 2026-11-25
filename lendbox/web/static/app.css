@@ -128,6 +128,12 @@ textarea.input{min-block-size:88px;resize:vertical}
 .hero h1{font-size:var(--fs-2xl);letter-spacing:-0.02em;max-width:18ch}
 .hero p{font-size:var(--fs-lg);color:var(--text-muted);max-width:40ch;margin-block:var(--s-3) var(--s-5)}
 .eyebrow{font-size:var(--fs-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--primary)}
+.hero-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-3);margin-block-start:var(--s-5)}
+.hero-photos .tile{box-shadow:var(--shadow)}
+@media (min-width:900px){
+  .hero.has-photos{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-6);align-items:center}
+  .hero-photos{margin-block-start:0}
+}
 .need{display:grid;gap:var(--s-3);grid-template-columns:1fr}
 .need .card b{display:block;font-size:var(--fs-lg);margin-block-end:var(--s-1)}
 .steps3{display:grid;gap:var(--s-3);counter-reset:st;padding:0;margin:0}
